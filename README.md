@@ -1,6 +1,5 @@
-# Deviantly — Mermaid architecture diagrams
+# Deviantly — Architecture diagrams
 
-These diagrams are derived from `deviantly-architecture-map.html`. They preserve the HTML's distinction between **code-derived paths**, **database-verified objects**, and **inferred or unverified handoffs**. A dashed edge is not proof of a production connection.
 
 ## 1. System overview
 
