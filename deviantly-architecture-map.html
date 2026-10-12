@@ -1,0 +1,2895 @@
+<!doctype html>
+<html lang="en" data-visualize-standalone>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Deviantly Architecture Map</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+
+</head>
+<body>
+<iframe id="codex-visualization" sandbox="allow-scripts" referrerpolicy="no-referrer" title="Deviantly Architecture Map" data-srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot; data-visualize-standalone&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Deviantly Architecture Map&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 16px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans:
+    -apple-system-body, ui-sans-serif, -apple-system, system-ui, &quot;Segoe UI&quot;,
+    Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;,
+    &quot;Segoe UI Symbol&quot;;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 8px);
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 2);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--font-size-base);
+  line-height: calc(var(--font-size-base) * 1.625);
+  font-weight: var(--font-weight-normal);
+}
+
+.cursor-interaction {
+  cursor: var(--cursor-interaction, pointer);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: var(--cursor-interaction, pointer);
+  text-decoration: none;
+  text-underline-offset: 2px;
+  font-weight: inherit;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+.table {
+  font-family: var(--font-sans);
+}
+
+h1 {
+  font-size: calc(var(--font-size-base) * 1.5);
+  line-height: 1.3333333333;
+}
+
+h2 {
+  font-size: calc(var(--font-size-base) * 1.25);
+  line-height: 1.4;
+}
+h3 {
+  font-size: calc(var(--font-size-base) * 1.125);
+  line-height: 1.5555555556;
+}
+h4 {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+h5,
+h6 {
+  font-size: var(--font-size-base);
+  line-height: calc(var(--font-size-base) * 1.625);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+th {
+  font-weight: 600;
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+pre,
+pre code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: calc(var(--font-size-base) * 0.875);
+  line-height: calc(var(--font-size-base) * 1.625);
+  font-family: var(--font-sans);
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 5%, transparent);
+}
+.table :is(th, td):not(:last-child) {
+  padding-inline-end: calc(var(--font-size-base) * 1.5);
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead :is(th, td) {
+  border-bottom-color: var(--border-strong, var(--input));
+  padding-block: calc(var(--font-size-base) / 2);
+  line-height: var(--font-size-base);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+.table tbody :is(th, td) {
+  padding-block: calc(var(--font-size-base) * 0.625);
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 8px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+.widget {
+  min-width: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  box-shadow: 0 0 0 0.5px var(--border-strong, var(--border));
+  color: var(--foreground);
+  background: var(--background);
+}
+
+#widget &gt; :not(.card, .widget, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  border: 1px solid var(--border);
+  corner-shape: var(--corner-shape);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--font-sans);
+  padding: 5px 12px;
+  border-color: color-mix(
+    in oklab,
+    light-dark(var(--primary-foreground), var(--foreground)) 5%,
+    transparent
+  );
+  border-radius: var(--radius-2xl);
+  color: light-dark(var(--primary-foreground), var(--foreground));
+  background: light-dark(var(--foreground), var(--popover));
+  box-shadow: 0 8px 18px rgb(15 23 42 / 20%);
+  letter-spacing: -0.15px;
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  color: color-mix(in srgb, var(--foreground) 40%, var(--muted-foreground));
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  font-family: var(--font-sans);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 1;
+}
+
+small,
+.text-small {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+/* Match inline alignment without overriding a containing flex or grid layout. */
+.btn,
+.nav-link,
+.form-control,
+.form-select,
+.form-range,
+.form-check {
+  vertical-align: middle;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  corner-shape: var(--corner-shape);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: inherit;
+  font-family: var(--font-sans);
+  height: fit-content;
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  padding-inline: var(--control-spacing, 12px);
+  border-color: transparent;
+  border-radius: var(--radius-full);
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 18px;
+}
+
+.btn {
+  border-color: var(--border);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: var(--cursor-interaction, pointer);
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: light-dark(
+    color-mix(in srgb, var(--foreground) 5.5%, transparent),
+    color-mix(in srgb, var(--foreground) 8%, transparent)
+  );
+}
+
+.nav-link:not(:disabled):not([aria-disabled=&quot;true&quot;]):hover {
+  background: color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+.btn-primary {
+  border-color: var(--border);
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: border-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: border-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--muted-foreground);
+  background: light-dark(
+    color-mix(in srgb, var(--foreground) 5.5%, transparent),
+    color-mix(in srgb, var(--foreground) 8%, transparent)
+  );
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+/* Shared preview chrome; product styles stay inside each variant. */
+.viz-dotted-background {
+  background-image: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--foreground) 14%, transparent) 0.8px,
+    transparent 0.8px
+  );
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.viz-carousel {
+  position: relative;
+  min-width: 0;
+}
+
+.viz-carousel:has(&gt; .viz-carousel-controls) {
+  min-height: calc(60px + var(--viz-carousel-picker-height, 0px));
+  padding-bottom: 60px;
+}
+
+.viz-carousel &gt; [data-variant][hidden] {
+  display: none !important;
+}
+
+.viz-carousel &gt; [data-variant] {
+  isolation: isolate;
+}
+
+.viz-carousel-controls {
+  --viz-carousel-hover: light-dark(
+    color-mix(in srgb, var(--foreground) 5.4%, transparent),
+    color-mix(in srgb, var(--foreground) 7.8%, transparent)
+  );
+  position: absolute;
+  z-index: 2;
+  bottom: 8px;
+  left: 50%;
+  display: flex;
+  width: max-content;
+  /* Leave room for the host&#x27;s design-controls launcher at the trailing edge. */
+  max-width: calc(100% - 96px);
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  /* Match the settings dropdown chrome independently of the content font size. */
+  font-size: 13px;
+  font-weight: var(--font-weight-normal);
+  line-height: 18px;
+  transform: translateX(-50%);
+  user-select: none;
+}
+
+/* Keep authored mockup button styles out of the shared carousel chrome. */
+.viz-carousel-controls button,
+.viz-carousel-picker &gt; summary {
+  display: flex !important;
+  height: auto !important;
+  min-height: 30px;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px;
+  padding: 0 6px !important;
+  -webkit-app-region: no-drag;
+  border: 0 !important;
+  border-radius: 14px !important;
+  color: inherit !important;
+  background: transparent !important;
+  font: inherit !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.viz-carousel-controls &gt; button,
+.viz-carousel-picker &gt; summary {
+  position: relative;
+  isolation: isolate;
+}
+
+.viz-carousel-controls &gt; button {
+  --icon-size: 16px;
+  width: 30px !important;
+  padding: 0 !important;
+}
+
+.viz-carousel-picker &gt; summary {
+  padding-inline: 12px !important;
+}
+
+.viz-carousel-controls .viz-carousel-caret {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  margin: 0;
+  color: inherit;
+  transform: rotate(180deg);
+}
+
+.viz-carousel-controls &gt; button &gt; svg,
+.viz-carousel-controls .viz-carousel-caret,
+.viz-carousel-count {
+  opacity: 0.5;
+}
+
+.viz-carousel-controls &gt; button::before,
+.viz-carousel-picker &gt; summary::before {
+  position: absolute;
+  z-index: -1;
+  inset: 3px;
+  border-radius: 12px;
+  content: &quot;&quot;;
+  pointer-events: none;
+}
+
+.viz-carousel-controls &gt; button:hover::before,
+.viz-carousel-picker &gt; summary:hover::before {
+  background: var(--viz-carousel-hover);
+}
+
+.viz-carousel-controls &gt; button,
+.viz-carousel-controls [data-lucide],
+.viz-carousel-controls .lucide {
+  flex-shrink: 0;
+}
+
+.viz-carousel-picker {
+  min-width: 0;
+}
+
+.viz-carousel-picker &gt; summary {
+  min-width: 0;
+  list-style: none;
+}
+
+.viz-carousel-picker &gt; summary::-webkit-details-marker {
+  display: none;
+}
+
+.viz-carousel-count {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.viz-carousel-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.viz-carousel-options {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 4px);
+  left: 0;
+  display: flex;
+  max-height: 240px;
+  flex-direction: column;
+  gap: 2px;
+  overflow: auto;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--background);
+  box-shadow: 0 4px 12px light-dark(rgb(0 0 0 / 6%), rgb(0 0 0 / 25%));
+}
+
+.viz-carousel-options &gt; button {
+  border-radius: max(0px, calc(var(--radius-lg) - 5px)) !important;
+  width: 100% !important;
+  min-height: 28px;
+  justify-content: flex-start !important;
+  padding: 4px 8px !important;
+  font-size: var(--font-size-small) !important;
+  text-align: start;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.viz-carousel-options &gt; [aria-current=&quot;true&quot;],
+.viz-carousel-options &gt; button:hover {
+  background: var(--viz-carousel-hover) !important;
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled=&quot;true&quot;] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  padding-inline: calc(4px + var(--control-spacing, 12px) / 2);
+  border-color: var(--input);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--popover) 96%, transparent);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.4285714286;
+}
+.form-control:is(
+  [type=&quot;file&quot;],
+  [type=&quot;date&quot;],
+  [type=&quot;datetime-local&quot;],
+  [type=&quot;month&quot;],
+  [type=&quot;week&quot;],
+  [type=&quot;color&quot;]
+) {
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  line-height: 18px;
+}
+.form-control:is(
+  [type=&quot;date&quot;],
+  [type=&quot;datetime-local&quot;],
+  [type=&quot;month&quot;],
+  [type=&quot;week&quot;]
+) {
+  padding-inline: var(--control-spacing, 12px);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+  padding: 0;
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+  min-height: calc(10px + 2 * var(--control-spacing, 12px));
+  padding-inline: var(--control-spacing, 12px);
+  margin-inline-end: var(--control-spacing, 12px);
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  resize: vertical;
+  min-height: 96px;
+  padding: 8px 10px;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: none;
+}
+.form-control:disabled {
+  color: var(--muted-foreground);
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  opacity: 1;
+}
+.form-control[aria-invalid=&quot;true&quot;] {
+  border-color: var(--red);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--red) 20%, transparent);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: fit-content;
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  margin: 0;
+  /* The secondary icon role is 14px at compact density and 16px at web density. */
+  --icon-size: calc(10px + var(--control-spacing, 12px) / 2);
+  /* Settings dropdowns retain a 12px inset and a 4px text-to-chevron gap. */
+  padding: 0 calc(16px + var(--icon-size)) 0 12px;
+  outline: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent calc(50% - 0.6px),
+      var(--muted-foreground) calc(50% - 0.6px) calc(50% + 0.6px),
+      transparent calc(50% + 0.6px)
+    ),
+    linear-gradient(
+      135deg,
+      transparent calc(50% - 0.6px),
+      var(--muted-foreground) calc(50% - 0.6px) calc(50% + 0.6px),
+      transparent calc(50% + 0.6px)
+    );
+  background-position:
+    calc(100% - 12px - var(--icon-size) / 2) 50%,
+    calc(100% - 12px - var(--icon-size) * 0.18) 50%;
+  background-repeat: no-repeat;
+  background-size: calc(var(--icon-size) * 0.32) calc(var(--icon-size) * 0.32);
+  cursor: var(--cursor-interaction, default);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 18px;
+}
+
+.form-select option {
+  color: var(--popover-foreground);
+  background-color: var(--popover);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: light-dark(
+    color-mix(in srgb, var(--foreground) 5.5%, transparent),
+    color-mix(in srgb, var(--foreground) 8%, transparent)
+  );
+}
+
+.form-select:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+.form-select:disabled {
+  opacity: 0.4;
+}
+
+.form-check {
+  display: flex;
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  corner-shape: round;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  width: calc(10px + var(--control-spacing, 12px) / 2);
+  height: calc(10px + var(--control-spacing, 12px) / 2);
+  border-color: var(--border-strong, var(--input));
+  border-radius: calc(var(--radius-sm) / 2);
+  background-color: transparent;
+  color: var(--foreground);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:is(:checked, :indeterminate) {
+  border-color: var(--border-strong, var(--input));
+  background-color: color-mix(in srgb, var(--popover) 96%, transparent);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+  background-color: var(--foreground);
+}
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:indeterminate::before {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 65%;
+  height: 6.65%;
+  margin: auto;
+  border-radius: var(--radius-full);
+  background: var(--foreground);
+  mask: none;
+  content: &quot;&quot;;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  border-radius: var(--radius-full);
+  width: 16px;
+  height: 16px;
+  border: 0;
+  box-shadow: inset 0 0 0 1px var(--input);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 0;
+  background: radial-gradient(
+    circle,
+    var(--primary-foreground) 0 3px,
+    var(--foreground) 3px
+  );
+  box-shadow: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:focus-visible {
+  border-color: var(--ring);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+.form-check:not(.form-switch) .form-check-input[type=&quot;radio&quot;]:disabled,
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;radio&quot;]:disabled
+  + .form-check-label {
+  opacity: 0.5;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+  border-color: #fff;
+  background: #fff;
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--blue);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+  outline: none;
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  accent-color: var(--primary);
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  outline: none;
+  border-radius: var(--radius-full);
+  color: var(--foreground);
+  background: transparent;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  background: var(--form-range-track, var(--border));
+  height: 2px;
+  border-radius: var(--radius-full);
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  margin-top: -9px;
+  border-color: transparent;
+  background: currentColor;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Outline the native track and thumb, preserving the larger input hit area. */
+.form-range:focus-visible::-webkit-slider-runnable-track {
+  outline: 2px auto Highlight;
+  outline-color: -webkit-focus-ring-color;
+}
+
+.form-range::-moz-range-track {
+  background: var(--form-range-track, var(--border));
+  height: 2px;
+  border-radius: var(--radius-full);
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  border-color: transparent;
+  background: currentColor;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+.form-range:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--blue);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline-offset: 2px;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.viz-carousel-controls :is(button, summary):focus-visible {
+  outline: 2px solid var(--ring) !important;
+  outline-offset: 2px !important;
+}
+
+/* Web recipes are the default, including on renderers without inline style queries. */
+@supports (border-radius: if(style(--corner-shape: round): 1px; else: 2px)) {
+  /* Match the host&#x27;s proportional text-sm scale at every text preference. */
+  .tooltip,
+  .viz-badge,
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    font-size: if(
+      style(--corner-shape: round): round(
+          nearest,
+          calc(var(--font-size-base) * 14 / 16),
+          1px
+        );
+        else: round(nearest, calc(var(--font-size-base) * 13 / 14), 1px)
+    );
+  }
+
+  .btn,
+  .nav-link,
+  .form-select {
+    border-radius: if(
+      style(--corner-shape: round): var(--radius-full); else: var(--radius-lg)
+    );
+  }
+
+  .form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+    border-radius: if(
+      style(--corner-shape: round): calc(var(--radius-sm) / 2);
+        else: calc(var(--radius-lg) * 0.4)
+    );
+  }
+
+  .tooltip {
+    font-weight: if(
+      style(--corner-shape: round): 600; else: var(--font-weight-normal)
+    );
+  }
+}
+
+@media (pointer: coarse) {
+  .viz-carousel:has(&gt; .viz-carousel-controls) {
+    min-height: calc(76px + var(--viz-carousel-picker-height, 0px));
+    padding-bottom: 76px;
+  }
+
+  .btn,
+  .nav-link,
+  .viz-carousel-controls button,
+  .viz-carousel-picker &gt; summary,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, calc(var(--font-size-base) * 14 / 16));
+    font-size: max(
+      16px,
+      round(nearest, calc(var(--font-size-base) * 14 / 16), 1px)
+    );
+  }
+  .form-control:is(
+    [type=&quot;file&quot;],
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;week&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;color&quot;]
+  ) {
+    height: 44px;
+    min-height: 44px;
+    font-size: max(16px, calc(var(--font-size-base) * 14 / 16));
+    font-size: max(
+      16px,
+      round(nearest, calc(var(--font-size-base) * 14 / 16), 1px)
+    );
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type=&quot;application/json&quot; id=&quot;codex-visualization-widget-state&quot;&gt;__CODEX_VISUALIZATION_WIDGET_STATE__&lt;/script&gt;
+&lt;script&gt;(() =&gt; {
+  const root = document.documentElement;
+  const mediaQuery = globalThis.matchMedia(&quot;(prefers-color-scheme: dark)&quot;);
+  const apply = Reflect.apply;
+  const isArray = Array.isArray;
+  const hasOwn = Object.hasOwn;
+  const parentWindow = globalThis.parent;
+  const stringify = JSON.stringify;
+  const parse = JSON.parse;
+  const encode = TextEncoder.prototype.encode.bind(new TextEncoder());
+  const initialStateElement = document.getElementById(
+    &quot;codex-visualization-widget-state&quot;,
+  );
+  const initialGlobals = parse(initialStateElement?.textContent ?? &quot;{}&quot;);
+  initialStateElement?.remove();
+  /** @type {Record&lt;string, unknown&gt; | null} */
+  let state = initialGlobals.widgetState ?? null;
+  const statePersistence = initialGlobals.statePersistence ?? &quot;none&quot;;
+  let nextStateRequestId = 0;
+  /** @type {Map&lt;number, { resolve: () =&gt; void; reject: (error: Error) =&gt; void; timeout: ReturnType&lt;typeof globalThis.setTimeout&gt;; serializedState: string }&gt;} */
+  const pendingStateWrites = new Map();
+  const persistenceError = () =&gt;
+    Object.assign(
+      new Error(&quot;The host could not persist the widget state update&quot;),
+      {
+        code: -32000,
+        data: { code: &quot;widget_state_persistence_failed&quot;, retryable: false },
+      },
+    );
+  /**
+   * @param {object} prototype
+   * @param {string} property
+   */
+  const getPrototypeGetter = (prototype, property) =&gt; {
+    // oxlint-disable-next-line typescript/unbound-method -- invoked through captured Reflect.apply
+    const getter = Object.getOwnPropertyDescriptor(prototype, property)?.get;
+    if (getter == null) {
+      throw new Error(`Missing ${property} getter`);
+    }
+    return getter;
+  };
+  const getMessageData = getPrototypeGetter(MessageEvent.prototype, &quot;data&quot;);
+  const getMessagePorts = getPrototypeGetter(MessageEvent.prototype, &quot;ports&quot;);
+  const getMessageSource = getPrototypeGetter(MessageEvent.prototype, &quot;source&quot;);
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const addHostMessageListener = MessagePort.prototype.addEventListener;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const postHostMessage = MessagePort.prototype.postMessage;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const startHostPort = MessagePort.prototype.start;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const stopMessagePropagation = Event.prototype.stopImmediatePropagation;
+  /** @type {MessagePort | null} */
+  let hostPort = null;
+  const postToHost = (type, payload) =&gt; {
+    if (hostPort != null) {
+      apply(postHostMessage, hostPort, [{ type, ...payload }]);
+    }
+  };
+  const openExternal = ({ href }) =&gt; {
+    if (globalThis.navigator.userActivation?.isActive === true) {
+      postToHost(&quot;open-external&quot;, { href });
+    }
+  };
+  const sendFollowUpMessage = ({ context, prompt, title }) =&gt; {
+    if (globalThis.navigator.userActivation?.isActive === true) {
+      postToHost(&quot;follow-up&quot;, { context, prompt, title });
+    }
+    return Promise.resolve();
+  };
+  /**
+   * @param {Record&lt;string, unknown&gt; | ((previous: Record&lt;string, unknown&gt; | null) =&gt; Record&lt;string, unknown&gt;)} next
+   * @returns {Promise&lt;void&gt;}
+   */
+  const setWidgetState = async (next) =&gt; {
+    const nextState = typeof next === &quot;function&quot; ? next(state) : next;
+    if (
+      nextState == null ||
+      typeof nextState !== &quot;object&quot; ||
+      isArray(nextState)
+    ) {
+      throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+    }
+    const inputState = stringify(
+      nextState,
+      (_key, /** @type {unknown} */ value) =&gt; {
+        if (
+          typeof value === &quot;undefined&quot; ||
+          typeof value === &quot;function&quot; ||
+          typeof value === &quot;symbol&quot; ||
+          (typeof value === &quot;number&quot; &amp;&amp; !Number.isFinite(value))
+        ) {
+          throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+        }
+        return value;
+      },
+    );
+    const parsedState = parse(inputState);
+    if (
+      parsedState == null ||
+      typeof parsedState !== &quot;object&quot; ||
+      isArray(parsedState)
+    ) {
+      throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+    }
+    const storedState = {
+      modelContent: null,
+      privateContent: null,
+      ...parsedState,
+    };
+    const serializedState = stringify(storedState);
+    if (encode(serializedState).length &gt; 16 * 1024) {
+      throw new TypeError(
+        &quot;Widget state must be a JSON object of at most 16 KiB&quot;,
+      );
+    }
+    if (
+      hasOwn(storedState, &quot;imageIds&quot;) &amp;&amp;
+      (!isArray(storedState.imageIds) ||
+        storedState.imageIds.some(
+          (/** @type {unknown} */ id) =&gt; typeof id !== &quot;string&quot;,
+        ))
+    ) {
+      throw new TypeError(&quot;Widget state imageIds must be an array of strings&quot;);
+    }
+    if (storedState.imageIds?.length &gt; 0) {
+      throw Object.assign(
+        new TypeError(&quot;Visualization state does not support image attachments&quot;),
+        { code: -32602, data: { code: &quot;images_unsupported&quot; } },
+      );
+    }
+    state = storedState;
+    globalThis.openai.widgetState = state;
+    globalThis.dispatchEvent(
+      new CustomEvent(&quot;openai:set_globals&quot;, {
+        detail: { globals: { widgetState: state } },
+      }),
+    );
+    if (statePersistence === &quot;none&quot;) {
+      throw persistenceError();
+    }
+    const id = ++nextStateRequestId;
+    return new Promise((resolve, reject) =&gt; {
+      const timeout = globalThis.setTimeout(() =&gt; {
+        pendingStateWrites.delete(id);
+        reject(persistenceError());
+      }, 30_000);
+      pendingStateWrites.set(id, { resolve, reject, timeout, serializedState });
+      postToHost(&quot;widget-state-write&quot;, { id, state: serializedState });
+    });
+  };
+  const syncTheme = () =&gt; {
+    const theme = mediaQuery.matches ? &quot;dark&quot; : &quot;light&quot;;
+    root.dataset.theme = theme;
+    globalThis.openai = {
+      ...globalThis.openai,
+      openExternal,
+      sendFollowUpMessage,
+      setWidgetState,
+      theme,
+      visualizationStyleVariables: {},
+      visualizationTheme: theme,
+      widgetState: state,
+      statePersistence,
+      stateModelContext: &quot;none&quot;,
+    };
+    globalThis.dispatchEvent(
+      new CustomEvent(&quot;openai:set_globals&quot;, {
+        detail: { globals: globalThis.openai },
+      }),
+    );
+  };
+  const sendHeight = () =&gt; {
+    postToHost(&quot;height&quot;, {
+      height: Math.ceil(
+        Math.max(
+          document.body.scrollHeight,
+          document.body.getBoundingClientRect().height,
+        ),
+      ),
+    });
+  };
+
+  globalThis.addEventListener(
+    &quot;message&quot;,
+    (event) =&gt; {
+      const data = apply(getMessageData, event, []);
+      const ports = apply(getMessagePorts, event, []);
+      const source = apply(getMessageSource, event, []);
+      if (
+        hostPort != null ||
+        source !== parentWindow ||
+        typeof data !== &quot;object&quot; ||
+        data?.type !== &quot;codex-visualization-initialize&quot; ||
+        !isArray(ports) ||
+        ports.length !== 1
+      ) {
+        return;
+      }
+      apply(stopMessagePropagation, event, []);
+      const nextHostPort = ports[0];
+      try {
+        apply(addHostMessageListener, nextHostPort, [
+          &quot;message&quot;,
+          (event) =&gt; {
+            const data = apply(getMessageData, event, []);
+            if (typeof data === &quot;object&quot; &amp;&amp; data?.type === &quot;measure&quot;) {
+              sendHeight();
+            } else if (
+              typeof data === &quot;object&quot; &amp;&amp;
+              data?.type === &quot;widget-state-result&quot;
+            ) {
+              /** @type {unknown} */
+              const id = data.id;
+              if (typeof id !== &quot;number&quot;) {
+                return;
+              }
+              const pending = pendingStateWrites.get(id);
+              if (pending != null) {
+                pendingStateWrites.delete(id);
+                globalThis.clearTimeout(pending.timeout);
+                if (data.ok === true) {
+                  pending.resolve();
+                } else {
+                  pending.reject(persistenceError());
+                }
+              }
+            }
+          },
+        ]);
+        apply(startHostPort, nextHostPort, []);
+      } catch {
+        return;
+      }
+      hostPort = nextHostPort;
+      for (const [id, { serializedState }] of pendingStateWrites) {
+        postToHost(&quot;widget-state-write&quot;, { id, state: serializedState });
+      }
+      sendHeight();
+    },
+    { capture: true },
+  );
+  document.currentScript?.remove();
+  mediaQuery.addEventListener(&quot;change&quot;, syncTheme);
+  globalThis.addEventListener(&quot;click&quot;, (event) =&gt; {
+    if (event.defaultPrevented) {
+      return;
+    }
+    let element = null;
+    if (event.target instanceof globalThis.Element) {
+      element = event.target;
+    } else if (event.target instanceof globalThis.Node) {
+      element = event.target.parentElement;
+    }
+    const link = element?.closest(&quot;a[href]&quot;);
+    const href = link?.getAttribute(&quot;href&quot;);
+    if (href == null) {
+      return;
+    }
+    if (href.startsWith(&quot;#&quot;)) {
+      let id;
+      try {
+        id = decodeURIComponent(href.slice(1));
+      } catch {
+        return;
+      }
+      const target = id.length === 0 ? root : document.getElementById(id);
+      if (
+        target == null ||
+        globalThis.navigator.userActivation?.isActive !== true
+      ) {
+        return;
+      }
+      event.preventDefault();
+      postToHost(&quot;scroll-to&quot;, {
+        top: target.getBoundingClientRect().top + globalThis.scrollY,
+      });
+      return;
+    }
+    event.preventDefault();
+    openExternal({ href });
+  });
+  new ResizeObserver(sendHeight).observe(document.body);
+  syncTheme();
+})();
+&lt;/script&gt;
+&lt;div id=&quot;deviantly-map&quot; aria-label=&quot;Interactive Deviantly architecture map&quot;&gt;
+  &lt;style&gt;
+    #deviantly-map{--ink:#232326;--muted:#5c5c5c;--subtle:#757575;--line:#dedede;--surface:#fff;--wash:#f7f7f5;--lime:#e8f000;--green:#0a8f43;--amber:#9a5700;--red:#ba3030;color:var(--ink);font:14px/1.45 ui-sans-serif,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,sans-serif;background:#fafafa;padding:18px;width:100%;max-width:1600px;margin:auto}#deviantly-map *{box-sizing:border-box}#deviantly-map h1,#deviantly-map h2,#deviantly-map h3,#deviantly-map p{margin:0}#deviantly-map h1{font-size:24px;font-weight:700;letter-spacing:-.03em}#deviantly-map h2{font-size:17px;font-weight:650}#deviantly-map h3{font-size:14px;font-weight:650}#deviantly-map button{font:inherit;color:inherit}.map-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:14px}.map-head p{color:var(--muted);margin-top:4px}.map-stamp{white-space:nowrap;color:var(--muted);font-size:12px}.map-stamp b{color:var(--ink);font-weight:650}.map-legend{display:flex;flex-wrap:wrap;gap:8px 16px;border-block:1px solid var(--line);padding:9px 0;margin-bottom:14px;color:var(--muted);font-size:12px}.map-legend span{display:inline-flex;align-items:center;gap:6px}.dot{width:8px;height:8px;border-radius:50%;background:var(--ink)}.dot.db{background:var(--green)}.dot.inferred{background:var(--amber)}.dot.gap{background:var(--red)}.map-layout{display:block}.inspector{position:relative;top:auto;flex:0 0 250px;width:250px;max-width:250px;max-height:380px;overflow:auto;border:1px solid var(--line);background:var(--surface);padding:12px;min-height:110px}.inspect-top{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}.status{font-size:11px;font-weight:650;text-transform:uppercase;letter-spacing:.045em;color:var(--muted);border:1px solid var(--line);padding:3px 6px}.status.db{color:var(--green)}.status.inferred{color:var(--amber)}.status.gap{color:var(--red)}.inspector p{color:var(--muted);margin:8px 0 12px}.inspector ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}.inspector li{margin:5px 0}.detail-tabs{margin:10px 0 8px}.nav-link[data-detail-tab]{cursor:pointer}[role=&quot;tabpanel&quot;][hidden]{display:none}.detail-label{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--subtle);margin-top:13px}.inspector code{font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;background:#f0f0ed;padding:2px 4px;overflow-wrap:anywhere}.evidence{font-size:12px;color:var(--subtle);padding-top:10px;border-top:1px solid var(--line);margin-top:12px}.flow-sections{min-width:0}.zone{padding:0 0 19px;margin-bottom:18px;border-bottom:1px solid var(--line)}.zone:last-child{border:0;margin:0}.zone-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:9px}.zone-heading p{color:var(--muted);font-size:12px}.lane{margin-top:10px}.lane-title{color:var(--subtle);font-size:11px;text-transform:uppercase;letter-spacing:.055em;margin-bottom:6px}.flow{display:flex;align-items:stretch;gap:6px;overflow-x:auto;padding:2px 1px 5px}.node{position:relative;text-align:left;min-width:126px;max-width:190px;flex:1 0 126px;min-height:68px;padding:9px 10px;background:var(--surface);border:1px solid var(--line);cursor:pointer}.node:hover,.edge:hover{background:#f0f0eb}.node[aria-pressed=&quot;true&quot;]{border-color:var(--ink);box-shadow:inset 3px 0 var(--lime)}.node strong{display:block;font-weight:650;line-height:1.25}.node small{display:block;color:var(--muted);font-size:11px;margin-top:5px;line-height:1.3}.kind{color:var(--subtle);font-size:10px;text-transform:uppercase;letter-spacing:.045em}.edge{align-self:center;flex:0 0 45px;min-width:45px;max-width:68px;border:0;background:transparent;color:var(--muted);cursor:pointer;padding:2px 0;font-size:11px;line-height:1.1;text-align:center}.edge b{display:block;font-size:22px;font-weight:400;line-height:1;color:var(--ink)}.edge.dashed b{color:var(--amber)}.edge small{display:block;font-size:10px;white-space:normal}.flag{display:inline-block;font-size:10px;color:#6c4b00;background:#fff4ce;padding:1px 4px;margin-top:5px}.zone-crawler{padding-top:10px}.crawler-note{font-size:12px;color:var(--muted);margin:0 0 8px}.source-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.source-list code{font-size:11px;color:var(--muted)}.flow-hint{font-size:11px;color:var(--subtle);margin-top:5px}.mode{font-size:11px;color:var(--subtle)}@media(max-width:820px){#deviantly-map{padding:12px}.map-layout{grid-template-columns:1fr;gap:14px}.inspector{position:relative;top:auto;grid-row:1;min-height:0}.flow-sections{grid-row:2}.map-head{display:block}.map-stamp{margin-top:8px}}@media(max-width:440px){.zone-heading{display:block}.zone-heading p{margin-top:3px}.node{min-width:116px;flex-basis:116px}.edge{flex-basis:38px;min-width:38px}.inspector{flex-basis:230px;width:230px;max-width:230px}}
+    #deviantly-map .flow{display:flex!important;flex-flow:row nowrap!important;align-items:flex-start!important;gap:6px;background:transparent!important;min-width:0;width:100%}#deviantly-map .detail-slot{flex:0 0 clamp(210px,24vw,250px);width:clamp(210px,24vw,250px);height:240px;align-self:flex-start;background:transparent!important}#deviantly-map .detail-slot .inspector{width:100%;height:100%;max-width:none;max-height:none;min-height:0;background:#fff!important;color:#232326!important}#deviantly-map .flow .node{align-self:flex-start;background:#fff!important;color:#232326!important;flex:1 0 126px;min-height:68px}#deviantly-map .flow .node:hover{background:#f0f0eb!important}#deviantly-map .flow .edge{align-self:flex-start;background:transparent!important;color:#5c5c5c!important;flex:0 0 45px}#deviantly-map .flow .node strong{color:#232326!important}#deviantly-map .flow .node small{color:#5c5c5c!important}#deviantly-map .detail-slot:empty{visibility:hidden}#deviantly-map #page-flow-list{min-width:0;width:100%}@media(max-width:820px){#deviantly-map{padding:12px}#deviantly-map .detail-slot{flex-basis:220px;width:220px}#deviantly-map .map-head{display:block}#deviantly-map .map-stamp{margin-top:8px}}@media(max-width:440px){#deviantly-map .detail-slot{flex-basis:200px;width:200px;height:240px}#deviantly-map .flow .node{flex-basis:116px;min-width:116px}#deviantly-map .flow .edge{flex-basis:38px;min-width:38px}}
+  &lt;/style&gt;
+  &lt;header class=&quot;map-head&quot;&gt;
+    &lt;div&gt;&lt;h1&gt;Deviantly · architecture &amp; data flow&lt;/h1&gt;&lt;p&gt;Follow a request from the product UI through API/query paths, then inspect the ingestion and event pipeline.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;map-stamp&quot;&gt;&lt;b&gt;Evidence labels&lt;/b&gt; · source + live Valv schemas&lt;/div&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;map-legend&quot; aria-label=&quot;Evidence legend&quot;&gt;&lt;span&gt;&lt;i class=&quot;dot&quot;&gt;&lt;/i&gt;Code-derived&lt;/span&gt;&lt;span&gt;&lt;i class=&quot;dot db&quot;&gt;&lt;/i&gt;Database-verified&lt;/span&gt;&lt;span&gt;&lt;i class=&quot;dot inferred&quot;&gt;&lt;/i&gt;Connection inferred&lt;/span&gt;&lt;span&gt;&lt;i class=&quot;dot gap&quot;&gt;&lt;/i&gt;Unresolved pipeline gap&lt;/span&gt;&lt;span class=&quot;mode&quot;&gt;Select a component or arrow to inspect it.&lt;/span&gt;&lt;/div&gt;
+  &lt;main class=&quot;map-layout&quot;&gt;
+    &lt;aside class=&quot;inspector&quot; id=&quot;map-inspector&quot; aria-live=&quot;polite&quot;&gt;
+      &lt;div class=&quot;inspect-top&quot;&gt;&lt;h2 id=&quot;inspect-title&quot;&gt;How to read this map&lt;/h2&gt;&lt;span class=&quot;status&quot; id=&quot;inspect-status&quot;&gt;Start here&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;nav nav-pills detail-tabs&quot; role=&quot;tablist&quot; aria-label=&quot;Component detail&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;nav-link active&quot; role=&quot;tab&quot; id=&quot;tab-overview&quot; aria-controls=&quot;panel-overview&quot; aria-selected=&quot;true&quot; data-detail-tab=&quot;overview&quot;&gt;Overview&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;nav-link&quot; role=&quot;tab&quot; id=&quot;tab-flow&quot; aria-controls=&quot;panel-flow&quot; aria-selected=&quot;false&quot; data-detail-tab=&quot;flow&quot;&gt;Flow&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;nav-link&quot; role=&quot;tab&quot; id=&quot;tab-evidence&quot; aria-controls=&quot;panel-evidence&quot; aria-selected=&quot;false&quot; data-detail-tab=&quot;evidence&quot;&gt;Evidence&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;section id=&quot;panel-overview&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-overview&quot;&gt;&lt;p id=&quot;inspect-summary&quot;&gt;Select a component or arrow; its details appear at the far-left of that same row.&lt;/p&gt;&lt;/section&gt;
+      &lt;section id=&quot;panel-flow&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-flow&quot; hidden&gt;&lt;div class=&quot;detail-label&quot; id=&quot;inspect-flow-label&quot;&gt;Flow details&lt;/div&gt;&lt;p id=&quot;inspect-flow-value&quot;&gt;Request path, query target, or data handoff.&lt;/p&gt;&lt;/section&gt;
+      &lt;section id=&quot;panel-evidence&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-evidence&quot; hidden&gt;&lt;p id=&quot;inspect-evidence&quot;&gt;Solid paths come from code; live schemas are marked database-verified. Dashed paths need deployment configuration or DDL confirmation.&lt;/p&gt;&lt;/section&gt;
+    &lt;/aside&gt;
+    &lt;div class=&quot;flow-sections&quot;&gt;
+      &lt;section class=&quot;zone&quot; aria-labelledby=&quot;web-zone&quot;&gt;&lt;div class=&quot;zone-heading&quot;&gt;&lt;h2 id=&quot;web-zone&quot;&gt;1 · Website, UI and API&lt;/h2&gt;&lt;p&gt;Browser request → route → handler → response&lt;/p&gt;&lt;/div&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;Cross-platform discovery / video browsing&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;ui-video&quot;&gt;&lt;span class=&quot;kind&quot;&gt;React UI&lt;/span&gt;&lt;strong&gt;Video Explorer&lt;/strong&gt;&lt;small&gt;Filters, pagination, platform views&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-ui-api&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;HTTP GET&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;go-api&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Go · Chi&lt;/span&gt;&lt;strong&gt;API router :8081&lt;/strong&gt;&lt;small&gt;Middleware → mounted /api/v1 routes&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-api-video&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;/videos&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;video-handler&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Handler + service&lt;/span&gt;&lt;strong&gt;Video query service&lt;/strong&gt;&lt;small&gt;Filters, text search, sorting, pagination&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-video-ch&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;HTTP SQL&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;clickhouse&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Analytics store&lt;/span&gt;&lt;strong&gt;ClickHouse&lt;/strong&gt;&lt;small&gt;Platform-specific scans + normalized results&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;Trend matrix and trend analytics (two different paths)&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;ui-trend&quot;&gt;&lt;span class=&quot;kind&quot;&gt;React UI&lt;/span&gt;&lt;strong&gt;Trend matrix&lt;/strong&gt;&lt;small&gt;Loads clusters; polls live data every 3.2 sec&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-trend-list&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;GET /trend&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;trend-static&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Go · handler&lt;/span&gt;&lt;strong&gt;MasterClusters response&lt;/strong&gt;&lt;small&gt;Filters in-memory list; headline KPIs are constants&lt;/small&gt;&lt;span class=&quot;flag&quot;&gt;not ClickHouse-backed&lt;/span&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge dashed&quot; data-key=&quot;edge-trend-ch&quot;&gt;&lt;b&gt;⇢&lt;/b&gt;&lt;small&gt;schema exists&lt;br&gt;no read path&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;trend-table&quot;&gt;&lt;span class=&quot;kind&quot;&gt;ClickHouse table&lt;/span&gt;&lt;strong&gt;trend_metrics&lt;/strong&gt;&lt;small&gt;Verified cluster scores + sample URLs and IDs&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;ui-leaderboard&quot;&gt;&lt;span class=&quot;kind&quot;&gt;React UI&lt;/span&gt;&lt;strong&gt;Leaderboard / hashtags&lt;/strong&gt;&lt;small&gt;Board, region, date, search and page controls&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-leaderboard-pg&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;/trend/leaderboard&lt;br&gt;/hashtags /dates&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;echotik-pg&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Separate PostgreSQL&lt;/span&gt;&lt;strong&gt;EchoTik repository&lt;/strong&gt;&lt;small&gt;leaderboard_videos snapshots + JSON payloads&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;Product / creator / shop and live feed&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;ui-commerce&quot;&gt;&lt;span class=&quot;kind&quot;&gt;React UI&lt;/span&gt;&lt;strong&gt;Products · shops · creators&lt;/strong&gt;&lt;small&gt;List/detail pages call resource APIs&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-commerce-pg&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;GET /api/v1/*&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;pg-repos&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Go repositories&lt;/span&gt;&lt;strong&gt;Primary PostgreSQL&lt;/strong&gt;&lt;small&gt;deviantly.* product / shop / creator repositories&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;ui-live&quot;&gt;&lt;span class=&quot;kind&quot;&gt;React UI&lt;/span&gt;&lt;strong&gt;Live Feed&lt;/strong&gt;&lt;small&gt;Feed + stats polling; results cached by API&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-live-ch&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;/live-feed&lt;br&gt;ClickHouse SQL&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;livefeed-service&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Go · livefeed client&lt;/span&gt;&lt;strong&gt;Query + in-memory cache&lt;/strong&gt;&lt;small&gt;Global viral rows, counts and feed windows&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;Public landing site (separate service)&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;landing&quot;&gt;&lt;span class=&quot;kind&quot;&gt;SvelteKit static build + Express&lt;/span&gt;&lt;strong&gt;deviantly.ai&lt;/strong&gt;&lt;small&gt;Static pages and lead capture endpoints&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-landing-pg&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;POST /demo&lt;br&gt;/waitlist&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;landing-pg&quot;&gt;&lt;span class=&quot;kind&quot;&gt;PostgreSQL&lt;/span&gt;&lt;strong&gt;Bookings + waitlist&lt;/strong&gt;&lt;small&gt;Demo lead saved; optional webhook is fire-and-forget&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;/div&gt;
+      &lt;/section&gt;
+      &lt;section class=&quot;zone&quot; aria-labelledby=&quot;page-flows-heading&quot;&gt;&lt;div class=&quot;zone-heading&quot;&gt;&lt;h2 id=&quot;page-flows-heading&quot;&gt;2 · Website page-by-page request flows&lt;/h2&gt;&lt;p&gt;Select a page, handler, storage target, or arrow&lt;/p&gt;&lt;/div&gt;
+        &lt;p class=&quot;crawler-note&quot;&gt;Each row follows the page’s UI request into its API route and the backend source or service. Dashed links indicate a partial/indirect data lineage, not a confirmed runtime feed.&lt;/p&gt;
+        &lt;div id=&quot;page-flow-list&quot;&gt;&lt;/div&gt;
+      &lt;/section&gt;
+      &lt;section class=&quot;zone&quot; aria-labelledby=&quot;data-zone&quot;&gt;&lt;div class=&quot;zone-heading&quot;&gt;&lt;h2 id=&quot;data-zone&quot;&gt;3 · Data stores and event processing&lt;/h2&gt;&lt;p&gt;Separate operational metadata, analytics, and event-shaped tables&lt;/p&gt;&lt;/div&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;Kafka-shaped ClickHouse ingestion (table names indicate stages; exact DDL wiring not in checked-in evidence)&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;kafka-topics&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Kafka topics · publishers&lt;/span&gt;&lt;strong&gt;Video / creator / Instagram events&lt;/strong&gt;&lt;small&gt;Payload key + JSON fields; producers publish records&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge dashed&quot; data-key=&quot;edge-topic-raw&quot;&gt;&lt;b&gt;⇢&lt;/b&gt;&lt;small&gt;topic-to-table&lt;br&gt;mapping unverified&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;raw-events&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Valv verified&lt;/span&gt;&lt;strong&gt;kafka_* raw tables&lt;/strong&gt;&lt;small&gt;Example: kafka_video_discovered exposes raw string&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge dashed&quot; data-key=&quot;edge-raw-mv&quot;&gt;&lt;b&gt;⇢&lt;/b&gt;&lt;small&gt;MV names suggest&lt;br&gt;parse / normalize&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;materialized&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Valv verified&lt;/span&gt;&lt;strong&gt;mv_kafka_* resources&lt;/strong&gt;&lt;small&gt;Parsed typed fields; example has id, date, URL, author&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge dashed&quot; data-key=&quot;edge-mv-tables&quot;&gt;&lt;b&gt;⇢&lt;/b&gt;&lt;small&gt;target relationship&lt;br&gt;needs DDL&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;analytics-targets&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Serving resources&lt;/span&gt;&lt;strong&gt;videos · shorts · metrics&lt;/strong&gt;&lt;small&gt;Normalized reads and derived analytics surfaces&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;Failures, observability and API read surfaces&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;event-errors&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Valv verified&lt;/span&gt;&lt;strong&gt;kafka_errors&lt;/strong&gt;&lt;small&gt;at, topic, error and raw payload fields&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge dashed&quot; data-key=&quot;edge-errors&quot;&gt;&lt;b&gt;⇢&lt;/b&gt;&lt;small&gt;per-topic error&lt;br&gt;MV paths&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;error-mvs&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Valv verified&lt;/span&gt;&lt;strong&gt;mv_errors_kafka_*&lt;/strong&gt;&lt;small&gt;Catalog has per-topic error resources&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;video-tables&quot;&gt;&lt;span class=&quot;kind&quot;&gt;API query targets&lt;/span&gt;&lt;strong&gt;videos_500plus · shorts_1000plus · reels&lt;/strong&gt;&lt;small&gt;Rich rows support filtering and analytics&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-video-response&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;map rows&lt;br&gt;JSON response&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;response-ui&quot;&gt;&lt;span class=&quot;kind&quot;&gt;API response&lt;/span&gt;&lt;strong&gt;Normalized video items&lt;/strong&gt;&lt;small&gt;UI renders list, card, metrics and thumbnails&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;Database roles and verified examples&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;postgres-role&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Operational / app metadata&lt;/span&gt;&lt;strong&gt;PostgreSQL&lt;/strong&gt;&lt;small&gt;Users, credits, app configs, crawler metadata, some source records&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;clickhouse-role&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Large analytical read plane&lt;/span&gt;&lt;strong&gt;ClickHouse&lt;/strong&gt;&lt;small&gt;Video corpus, snapshots, metrics, trend and rollup tables&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;partial-catalog&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Important catalog limit&lt;/span&gt;&lt;strong&gt;Valv PostgreSQL exposure is partial&lt;/strong&gt;&lt;small&gt;Core API schema names are not present in exposed resource list&lt;/small&gt;&lt;span class=&quot;flag&quot;&gt;do not assume absent in server&lt;/span&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;/div&gt;
+      &lt;/section&gt;
+      &lt;section class=&quot;zone zone-crawler&quot; aria-labelledby=&quot;crawler-zone&quot;&gt;&lt;div class=&quot;zone-heading&quot;&gt;&lt;h2 id=&quot;crawler-zone&quot;&gt;4 · Crawler and source ingestion&lt;/h2&gt;&lt;p&gt;Placed last; solid arrows show direct evidence, dashed arrows show an unproven handoff&lt;/p&gt;&lt;/div&gt;
+        &lt;p class=&quot;crawler-note&quot;&gt;These are related source projects, not one unified pipeline. Follow each lane independently; a database write alone does not prove that the website reads that table.&lt;/p&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;YouTube Shorts · strongest source-to-serving trail in code&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;yt-crawler&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Go crawler family&lt;/span&gt;&lt;strong&gt;Discover channels + Shorts&lt;/strong&gt;&lt;small&gt;Shard text / JSONL files; optional Kafka producer defaults off&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-yt-files&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;data/*.txt&lt;br&gt;channel IDs&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;yt-extractor&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Rust extractor&lt;/span&gt;&lt;strong&gt;Scan → dedupe → enrich&lt;/strong&gt;&lt;small&gt;Shard state, Postgres rows, creator refresh and short metadata&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-yt-pg&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;upsert +&lt;br&gt;enrichment&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;yt-pg&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Extractor database&lt;/span&gt;&lt;strong&gt;youtube_shorts + creators&lt;/strong&gt;&lt;small&gt;Postgres operational staging and publish markers&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-yt-kafka&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;ack then mark&lt;br&gt;published&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;yt-kafka&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Publisher topics&lt;/span&gt;&lt;strong&gt;youtube.shorts · youtube.creators&lt;/strong&gt;&lt;small&gt;At-least-once behavior; crash after ack can duplicate&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge dashed&quot; data-key=&quot;edge-yt-ch&quot;&gt;&lt;b&gt;⇢&lt;/b&gt;&lt;small&gt;downstream&lt;br&gt;consumer mapping&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;youtube-serving&quot;&gt;&lt;span class=&quot;kind&quot;&gt;ClickHouse serving&lt;/span&gt;&lt;strong&gt;youtube_shorts_1000plus&lt;/strong&gt;&lt;small&gt;API reads this table; Kafka-to-serving route not confirmed&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;TikTok Shop&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;tt-shop-crawler&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Crawler + enrichers&lt;/span&gt;&lt;strong&gt;Seller / product / video / creator&lt;/strong&gt;&lt;small&gt;API collection, queueing, enrichment and upsert&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-tt-pg&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;same transaction&lt;br&gt;where enabled&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;tt-shop-pg&quot;&gt;&lt;span class=&quot;kind&quot;&gt;PostgreSQL&lt;/span&gt;&lt;strong&gt;tiktok_shop.* + outbox&lt;/strong&gt;&lt;small&gt;Entity rows plus kafka_outbox payloads&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge dashed&quot; data-key=&quot;edge-tt-kafka&quot;&gt;&lt;b&gt;⇢&lt;/b&gt;&lt;small&gt;script exists;&lt;br&gt;runner not located&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;tt-shop-kafka&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Kafka publisher script&lt;/span&gt;&lt;strong&gt;Outbox → topic (conditional)&lt;/strong&gt;&lt;small&gt;Publisher helper exists; repository has no caller evidence beyond script&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;Instagram, Amazon, and other crawler code&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;ig-crawler&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Instagram crawlers&lt;/span&gt;&lt;strong&gt;Harvester / UA pipeline&lt;/strong&gt;&lt;small&gt;Multiple programs; selected pipeline writes reel + creator metadata&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;edge-ig-pg&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;Postgres upsert&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;ig-pg&quot;&gt;&lt;span class=&quot;kind&quot;&gt;PostgreSQL verified&lt;/span&gt;&lt;strong&gt;instagram_reels + creators&lt;/strong&gt;&lt;small&gt;Valv confirms URL, caption, author, media and engagement fields&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge dashed&quot; data-key=&quot;edge-ig-ch&quot;&gt;&lt;b&gt;⇢&lt;/b&gt;&lt;small&gt;CH table exists;&lt;br&gt;bridge unlocated&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;ig-ch&quot;&gt;&lt;span class=&quot;kind&quot;&gt;ClickHouse verified&lt;/span&gt;&lt;strong&gt;instagram_reels + metrics&lt;/strong&gt;&lt;small&gt;API reads CH names; copy / consumer relationship is not established&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;amazon-crawler&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Amazon scanner&lt;/span&gt;&lt;strong&gt;Batch scan → amazon_product&lt;/strong&gt;&lt;small&gt;PG row schema verified; API queries a different schema name&lt;/small&gt;&lt;span class=&quot;flag&quot;&gt;join path uncertain&lt;/span&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge dashed&quot; data-key=&quot;edge-amazon-api&quot;&gt;&lt;b&gt;⇢&lt;/b&gt;&lt;small&gt;name mismatch /&lt;br&gt;disabled include&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;amazon-api&quot;&gt;&lt;span class=&quot;kind&quot;&gt;API repository&lt;/span&gt;&lt;strong&gt;deviantly.amazon_products&lt;/strong&gt;&lt;small&gt;Cannot confirm scanner rows feed this query&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;div class=&quot;source-list&quot;&gt;&lt;code&gt;Repository scope reviewed: deviantly-ui · deviantly-server · landing · YouTube · Shorts extractor · TikTok Shop · Instagram · Amazon&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;/section&gt;
+      &lt;section class=&quot;zone&quot; aria-labelledby=&quot;system-zone&quot;&gt;&lt;div class=&quot;zone-heading&quot;&gt;&lt;h2 id=&quot;system-zone&quot;&gt;5 · General architecture · how the projects fit together&lt;/h2&gt;&lt;p&gt;System-wide view across all repositories, services, event paths and databases&lt;/p&gt;&lt;/div&gt;
+        &lt;p class=&quot;crawler-note&quot;&gt;This map separates confirmed runtime paths from adjacent projects whose database or Kafka handoff is not established. Click every box or arrow for project-specific detail.&lt;/p&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;Website requests and serving paths&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-users&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Entry points&lt;/span&gt;&lt;strong&gt;Product users&lt;/strong&gt;&lt;small&gt;deviantly.ai app · landing site · external clients&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;system-edge-web&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;browser HTTP&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-webs&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Web repositories&lt;/span&gt;&lt;strong&gt;React UI + SvelteKit landing&lt;/strong&gt;&lt;small&gt;Separate applications, deployments and request layers&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;system-edge-api&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;API calls&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-api&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Application backend&lt;/span&gt;&lt;strong&gt;Go Chi API&lt;/strong&gt;&lt;small&gt;Routes to handlers; JSON response to UI&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;system-edge-stores&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;per-handler&lt;br&gt;database client&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-readplanes&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Read planes&lt;/span&gt;&lt;strong&gt;Postgres · ClickHouse · EchoTik PG&lt;/strong&gt;&lt;small&gt;Different stores and pools serve different page families&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;Ingestion systems and database boundaries&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-youtube&quot;&gt;&lt;span class=&quot;kind&quot;&gt;YouTube projects&lt;/span&gt;&lt;strong&gt;Go discovery → shard files → Rust extractor&lt;/strong&gt;&lt;small&gt;Extractor Postgres → youtube.shorts / creators topics&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge dashed&quot; data-key=&quot;system-edge-youtube&quot;&gt;&lt;b&gt;⇢&lt;/b&gt;&lt;small&gt;consumer mapping&lt;br&gt;unverified&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-kafka-ch&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Event/analytics plane&lt;/span&gt;&lt;strong&gt;Kafka → ClickHouse raw / parsed resources&lt;/strong&gt;&lt;small&gt;Catalog has both families; exact topic, MV and target wiring needs DDL&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge&quot; data-key=&quot;system-edge-ch-api&quot;&gt;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;Go API reads&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-video-api&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Serving&lt;/span&gt;&lt;strong&gt;Video + Live Feed pages&lt;/strong&gt;&lt;small&gt;Query ClickHouse serving tables; fallback paths can affect provenance&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;Other subprojects that do not yet form a proven end-to-end website feed&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-tiktok&quot;&gt;&lt;span class=&quot;kind&quot;&gt;TikTok Shop Crawler&lt;/span&gt;&lt;strong&gt;tiktok_shop PostgreSQL + outbox&lt;/strong&gt;&lt;small&gt;Publisher script can send events; production scheduler/consumer not verified&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge dashed&quot; data-key=&quot;system-edge-tt&quot;&gt;&lt;b&gt;⇢&lt;/b&gt;&lt;small&gt;runtime handoff&lt;br&gt;not verified&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-instagram&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Instagram Crawler&lt;/span&gt;&lt;strong&gt;PostgreSQL reels + creators&lt;/strong&gt;&lt;small&gt;ClickHouse tables/API reads exist; PG → CH synchronization is unknown&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge dashed&quot; data-key=&quot;system-edge-ig&quot;&gt;&lt;b&gt;⇢&lt;/b&gt;&lt;small&gt;bridge unknown&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-amazon&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Amazon Crawler&lt;/span&gt;&lt;strong&gt;PostgreSQL amazon_product&lt;/strong&gt;&lt;small&gt;Product API SQL points to deviantly.amazon_products; mapping not proven&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;edge dashed&quot; data-key=&quot;system-edge-amz&quot;&gt;&lt;b&gt;⇢&lt;/b&gt;&lt;small&gt;schema mismatch /&lt;br&gt;include disabled&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-commerce-api&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Commerce API&lt;/span&gt;&lt;strong&gt;Postgres deviantly.* repositories&lt;/strong&gt;&lt;small&gt;Product/shop/brand/creator paths; Valv PG catalog visibility is partial&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;lane&quot;&gt;&lt;div class=&quot;lane-title&quot;&gt;Operational metadata, external services and limits&lt;/div&gt;&lt;div class=&quot;flow&quot;&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-postgres&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Postgres&lt;/span&gt;&lt;strong&gt;App + crawler metadata&lt;/strong&gt;&lt;small&gt;Several repositories use DATABASE_URL; same physical DB is deployment-dependent&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-external&quot;&gt;&lt;span class=&quot;kind&quot;&gt;External dependencies&lt;/span&gt;&lt;strong&gt;EchoTik · MCP · AI providers · report service&lt;/strong&gt;&lt;small&gt;Separate endpoints, credentials and runtime health&lt;/small&gt;&lt;/button&gt;
+          &lt;button class=&quot;node&quot; data-key=&quot;system-catalog&quot;&gt;&lt;span class=&quot;kind&quot;&gt;Live evidence boundary&lt;/span&gt;&lt;strong&gt;Valv catalog != full DDL&lt;/strong&gt;&lt;small&gt;PG exposure is partial; ClickHouse describe confirms columns, not lineage/engines&lt;/small&gt;&lt;/button&gt;
+        &lt;/div&gt;&lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+  &lt;script&gt;
+    (()=&gt;{
+      const root=document.getElementById(&#x27;deviantly-map&#x27;);
+      const inspector=root.querySelector(&#x27;#map-inspector&#x27;);
+      const firstFlow=root.querySelector(&#x27;.flow&#x27;);
+      const reserveDetailSlot=flow=&gt;{let slot=flow.querySelector(&#x27;.detail-slot&#x27;);if(!slot){slot=document.createElement(&#x27;div&#x27;);slot.className=&#x27;detail-slot&#x27;;flow.prepend(slot);}return slot;};
+      root.querySelectorAll(&#x27;.flow&#x27;).forEach(reserveDetailSlot);
+      reserveDetailSlot(firstFlow).append(inspector);
+      const info={
+        &#x27;ui-video&#x27;:[&#x27;Video Explorer&#x27;,&#x27;Code-derived&#x27;,&#x27;React feature builds URL parameters from filters and calls the Go video endpoint. The server selects TikTok, YouTube, Instagram, or combined result paths.&#x27;,&#x27;UI → API&#x27;,&#x27;deviantly-ui/src/features/videos/videos-page.tsx · deviantly-server/internal/video/handler.go&#x27;],
+        &#x27;edge-ui-api&#x27;:[&#x27;UI → API request&#x27;,&#x27;Code-derived&#x27;,&#x27;Browser fetch uses the shared API base helper. On development port 5173 and production UI port 8080, frontend code targets the same host on port 8081; other deployments use relative paths.&#x27;,&#x27;Network boundary&#x27;,&#x27;JSON request/response over HTTP&#x27;],
+        &#x27;go-api&#x27;:[&#x27;Go API router&#x27;,&#x27;Code-derived&#x27;,&#x27;Chi router listens on PORT (default 8081). Request ID, real IP, CORS, request logging, panic recovery and v1 compression wrap route handling. /api/v1 mounts products, shops, creators, videos, trend, live-feed, auth, AI and related handlers.&#x27;,&#x27;Runtime&#x27;,&#x27;deviantly-server/cmd/api/main.go&#x27;],
+        &#x27;edge-api-video&#x27;:[&#x27;Router → video handler&#x27;,&#x27;Code-derived&#x27;,&#x27;Go mounts the video handler under /api/v1/videos. Handler binds request query parameters into video service inputs and writes a JSON response.&#x27;,&#x27;Route&#x27;,&#x27;GET /api/v1/videos and detail/thumbnail subroutes&#x27;],
+        &#x27;video-handler&#x27;:[&#x27;Video query service&#x27;,&#x27;Code-derived&#x27;,&#x27;GET /api/v1/videos parses platform, country/category, metric bounds, date range, keyword search, sort and pagination. It may expand query terms with an external AI call; network or response failures fall back to tokenized input. Queries go to ClickHouse over HTTP. If query paths return no rows or fail, service can return an in-code sample list; some responses also use hard-coded totals.&#x27;,&#x27;Primary SQL targets&#x27;,&#x27;default.videos_500plus / videos_flat · youtube_shorts_1000plus · instagram_reels (+ metrics)&#x27;],
+        &#x27;edge-video-ch&#x27;:[&#x27;Video service → ClickHouse&#x27;,&#x27;Code-derived&#x27;,&#x27;Service builds platform-specific SQL, sends it to the ClickHouse HTTP interface with configured endpoint/user/password, parses JSONEachRow, then maps rows into response items. Table fallback and sample fallback paths exist.&#x27;,&#x27;Network boundary&#x27;,&#x27;ClickHouse HTTP; credentials should come from environment configuration.&#x27;],
+        &#x27;clickhouse&#x27;:[&#x27;ClickHouse&#x27;,&#x27;Database-verified&#x27;,&#x27;Valv currently exposes normalized video, creator, metric, snapshot, trend, and raw Kafka-named resources. It is the API’s large analytical read store. Valv schema descriptions confirm columns, not table engines, MV definitions, Kafka engine settings, or exact producer-to-table wiring.&#x27;,&#x27;Example resources&#x27;,&#x27;videos_500plus · youtube_shorts_1000plus · instagram_reels · trend_metrics&#x27;],
+        &#x27;ui-trend&#x27;:[&#x27;Trend matrix UI&#x27;,&#x27;Code-derived&#x27;,&#x27;Matrix view fetches /api/v1/trend with search and platform filters. While visible it polls /api/v1/trend/live every 3.2 seconds and merges recent arrivals into UI state.&#x27;,&#x27;Call cadence&#x27;,&#x27;Initial/filtered fetch + 3.2-second live poll&#x27;],
+        &#x27;trend-static&#x27;:[&#x27;Trend list handler&#x27;,&#x27;Code-derived&#x27;,&#x27;GET /api/v1/trend filters in-memory MasterClusters by platform and text; response KPIs are constants except the filtered cluster count. GET /live rotates samples from those same clusters and derives velocity from wall-clock seconds. This response path does not query ClickHouse.&#x27;,&#x27;Important behavior&#x27;,&#x27;The “live” endpoint is simulated/rotating response data, not crawler event telemetry.&#x27;],
+        &#x27;edge-trend-list&#x27;:[&#x27;Trend UI → trend list&#x27;,&#x27;Code-derived&#x27;,&#x27;Browser fetches /api/v1/trend?q=…&amp;platform=… . Go filters MasterClusters and returns cluster objects, telemetry and fixed corpus counters.&#x27;,&#x27;Route&#x27;,&#x27;GET /api/v1/trend&#x27;],
+        &#x27;edge-trend-ch&#x27;:[&#x27;trend_metrics → Trend matrix&#x27;,&#x27;Unresolved pipeline gap&#x27;,&#x27;Valv confirms a rich ClickHouse trend_metrics table, but the current matrix handler reads MasterClusters in memory. No handler query mapping this table to the matrix response was found. The data may still be used by another job or surface.&#x27;,&#x27;Database fields&#x27;,&#x27;cluster_name, video_count, avg_views, opportunity_score, acceleration_pct, stage, sample_urls, hashtags&#x27;],
+        &#x27;trend-table&#x27;:[&#x27;trend_metrics&#x27;,&#x27;Database-verified&#x27;,&#x27;Live ClickHouse catalog describes cluster aggregates, opportunity/acceleration scores, stage, sample URLs/IDs, hashtags and suggested words. A table’s presence does not mean the matrix endpoint serves it.&#x27;,&#x27;Evidence&#x27;,&#x27;Valv describe_resource&#x27;],
+        &#x27;ui-leaderboard&#x27;:[&#x27;Leaderboard and hashtag UI&#x27;,&#x27;Code-derived&#x27;,&#x27;Separate components call trend leaderboard, hashtags and dates endpoints. Controls send board, region, time_type, time_range, search, page and limit.&#x27;,&#x27;Route family&#x27;,&#x27;/api/v1/trend/leaderboard · /hashtags · /dates&#x27;],
+        &#x27;edge-leaderboard-pg&#x27;:[&#x27;Trend analytics → EchoTik PostgreSQL&#x27;,&#x27;Code-derived&#x27;,&#x27;Separate EchoTik repository issues parameterized queries against leaderboard_videos. It chooses available dates, applies filters, fetches page data JSON, parses fields, and constructs fallback thumbnail URLs. Count-query failures are currently treated as zero.&#x27;,&#x27;Database&#x27;,&#x27;ECHOTIK_DATABASE_URL (separate pool)&#x27;],
+        &#x27;echotik-pg&#x27;:[&#x27;EchoTik PostgreSQL&#x27;,&#x27;Code-derived&#x27;,&#x27;A second PostgreSQL pool backs leaderboard snapshots, hashtags, stats and dates. This is separate from the app metadata pool and from ClickHouse. Valv’s listed PostgreSQL catalog does not establish that this external database is exposed there.&#x27;,&#x27;Source tables&#x27;,&#x27;leaderboard_videos (code query)&#x27;],
+        &#x27;ui-commerce&#x27;:[&#x27;Products, shops, creators UI&#x27;,&#x27;Code-derived&#x27;,&#x27;Resource pages issue JSON API requests and render list/detail data. Server registers resource handlers and injects repositories backed by the main PG pool when available.&#x27;,&#x27;Examples&#x27;,&#x27;/api/v1/products · /shops · /creators · /brands&#x27;],
+        &#x27;edge-commerce-pg&#x27;:[&#x27;Commerce APIs → PostgreSQL repositories&#x27;,&#x27;Code-derived&#x27;,&#x27;The Go API wires product, shop, creator, brand, hooks, insights and auth repositories over its primary pgx pool. Queries target deviantly.* schemas. Valv’s current PG exposed-resource list is partial and omits those core names.&#x27;,&#x27;Caveat&#x27;,&#x27;Code query target does not prove Valv exposure or live row availability.&#x27;],
+        &#x27;pg-repos&#x27;:[&#x27;Primary PostgreSQL repositories&#x27;,&#x27;Code-derived&#x27;,&#x27;Go pgx pool configured to 25 max and 8 min connections; startup prewarms and pings. Repositories query deviantly.* app schemas. If initial connect fails the server starts with nil repositories; parts of the app return empty results or use handler/service fallback behavior.&#x27;,&#x27;Code entry point&#x27;,&#x27;deviantly-server/internal/db/db.go&#x27;],
+        &#x27;ui-live&#x27;:[&#x27;Live Feed UI&#x27;,&#x27;Code-derived&#x27;,&#x27;The page requests /api/v1/live-feed and /stats and also has client polling. API responses combine query results and cache state; “live” describes the product view, not necessarily an event push stream.&#x27;,&#x27;Request style&#x27;,&#x27;HTTP polling; no SSE/WebSocket evidenced for these reads&#x27;],
+        &#x27;edge-live-ch&#x27;:[&#x27;Live feed → ClickHouse&#x27;,&#x27;Code-derived&#x27;,&#x27;Go client sends ClickHouse HTTP SQL for counts, windows and feed rows. It caches page-one and range results, plus global viral rows, to avoid repeating large queries.&#x27;,&#x27;Read examples&#x27;,&#x27;videos · youtube_shorts · instagram_reels · videos_500plus · youtube_shorts_1000plus&#x27;],
+        &#x27;livefeed-service&#x27;:[&#x27;Live feed query + cache&#x27;,&#x27;Code-derived&#x27;,&#x27;Go client owns HTTP credentials via environment configuration, an HTTP timeout, in-memory page/range caches, sampled counts/rate smoothing and periodically refreshed viral rows. UI pulls results; these code paths are not a Kafka consumer.&#x27;,&#x27;Operations note&#x27;,&#x27;Per-process cache is not shared between API replicas.&#x27;],
+        &#x27;landing&#x27;:[&#x27;Public marketing site&#x27;,&#x27;Code-derived&#x27;,&#x27;SvelteKit build is served by Express. Express serves static assets and handles /api/v1/demo, /waitlist and /health. This service is separate from the React application/API router.&#x27;,&#x27;Express port&#x27;,&#x27;Default 6180 (environment override supported)&#x27;],
+        &#x27;edge-landing-pg&#x27;:[&#x27;Landing forms → PostgreSQL&#x27;,&#x27;Code-derived&#x27;,&#x27;Demo requests validate and normalize fields, deduplicate by email over 15 minutes, insert a booking, optionally insert a waitlist row, then return a response. Waitlist insert is idempotent. Optional external webhook is asynchronous and its failure does not undo the booking.&#x27;,&#x27;Limits&#x27;,&#x27;Body JSON cap 100 KB; IP-based in-memory limits per process.&#x27;],
+        &#x27;landing-pg&#x27;:[&#x27;Landing PostgreSQL&#x27;,&#x27;Code-derived&#x27;,&#x27;Landing Express uses its own DATABASE_URL pool. Form tables are bookings and waitlist. This path is separate from the app’s primary and EchoTik database pools.&#x27;,&#x27;Source&#x27;,&#x27;deviantly-landing-page/server.js&#x27;],
+        &#x27;kafka-topics&#x27;:[&#x27;Event publishers / topics&#x27;,&#x27;Code-derived&#x27;,&#x27;Shorts extractor defines youtube.shorts and youtube.creators topic flows and publishes keyed JSON payloads. TikTok Shop includes an outbox publisher script. Other producer helpers exist in the Go crawler family, but several default disabled.&#x27;,&#x27;Critical boundary&#x27;,&#x27;Kafka broker operation and exact consumers are not proven by this repository scan.&#x27;],
+        &#x27;edge-topic-raw&#x27;:[&#x27;Kafka topic → raw resource&#x27;,&#x27;Connection inferred&#x27;,&#x27;Valv exposes kafka_video_discovered and sibling resources with raw payload fields; source code publishes Kafka topics. Exact topic names, consumer identity, broker routing and landing-table mapping require deployment config or DDL.&#x27;,&#x27;Status&#x27;,&#x27;Do not treat similar names as a proven connection.&#x27;],
+        &#x27;raw-events&#x27;:[&#x27;Raw event resources&#x27;,&#x27;Database-verified&#x27;,&#x27;Valv confirms raw Kafka-named tables; kafka_video_discovered exposes a raw string. This proves the resource and shape, not whether the source is a Kafka engine, a replicated sink, or another ingest mechanism.&#x27;,&#x27;Example&#x27;,&#x27;kafka_video_discovered(raw String)&#x27;],
+        &#x27;edge-raw-mv&#x27;:[&#x27;Raw resource → parsed view&#x27;,&#x27;Connection inferred&#x27;,&#x27;The catalog contains parallel kafka_* and mv_kafka_* names, and the latter expose typed fields. This is consistent with parse/normalize materialized views, but Valv does not expose definitions or declared relations.&#x27;,&#x27;Needed to verify&#x27;,&#x27;SHOW CREATE TABLE / view and source pipeline configuration&#x27;],
+        &#x27;materialized&#x27;:[&#x27;Parsed event resources&#x27;,&#x27;Database-verified&#x27;,&#x27;Example mv_kafka_video_discovered has UUID id, publish_date, sync timestamp, URL, title, thumbnail, platform/category/country and author fields. Instagram parsed resource mirrors typed reel fields.&#x27;,&#x27;Example resources&#x27;,&#x27;mv_kafka_video_discovered · mv_kafka_instagram_reels&#x27;],
+        &#x27;edge-mv-tables&#x27;:[&#x27;Parsed view → serving tables&#x27;,&#x27;Connection inferred&#x27;,&#x27;Valv also exposes videos, youtube_shorts, metrics and analytics tables. Without DDL, data lineage/targets cannot be asserted from object names. Some serving tables may be populated by independent pipelines.&#x27;,&#x27;Status&#x27;,&#x27;Verify MV targets, refresh semantics and deduplication keys.&#x27;],
+        &#x27;analytics-targets&#x27;:[&#x27;Serving / analytics tables&#x27;,&#x27;Database-verified&#x27;,&#x27;Catalog includes normalized entities, snapshots, metrics and aggregates, including videos, youtube_shorts, trend_metrics, trend_daily_agg, analytics_daily_agg, and *_500plus / *_1000plus tables.&#x27;,&#x27;Caution&#x27;,&#x27;Some APIs use hard-coded totals or sample fallbacks despite live table data.&#x27;],
+        &#x27;event-errors&#x27;:[&#x27;kafka_errors&#x27;,&#x27;Database-verified&#x27;,&#x27;Live Valv description includes event time (at), topic, error text and raw payload. This is a useful central failure surface, but no row-count/freshness conclusion is made here.&#x27;,&#x27;Columns&#x27;,&#x27;at · topic · error · raw&#x27;],
+        &#x27;edge-errors&#x27;:[&#x27;Error resources / per-topic MVs&#x27;,&#x27;Connection inferred&#x27;,&#x27;Catalog contains mv_errors_kafka_* resources for multiple source names. Exact view definitions and whether they derive from kafka_errors or raw topic tables are not exposed.&#x27;,&#x27;Status&#x27;,&#x27;Names imply a relationship; need DDL to verify.&#x27;],
+        &#x27;error-mvs&#x27;:[&#x27;Per-topic error resources&#x27;,&#x27;Database-verified&#x27;,&#x27;Valv catalog lists per-topic mv_errors_kafka_* resources. Their column contracts and retention cannot be confirmed from the catalog listing alone.&#x27;,&#x27;Examples&#x27;,&#x27;mv_errors_kafka_video_discovered · mv_errors_kafka_youtube_shorts&#x27;],
+        &#x27;video-tables&#x27;:[&#x27;Serving tables queried by API&#x27;,&#x27;Code-derived + database-verified&#x27;,&#x27;Video service SQL targets platform-specific ClickHouse resources. Valv confirms rich normalized schemas: TikTok-shaped videos_500plus, YouTube shorts_1000plus, and Instagram reels/metrics.&#x27;,&#x27;Examples&#x27;,&#x27;API code + Valv schema descriptions&#x27;],
+        &#x27;edge-video-response&#x27;:[&#x27;ClickHouse rows → UI response&#x27;,&#x27;Code-derived&#x27;,&#x27;Service scans positional rows into a common VideoItem shape (URL, title, thumbnail, platform, category/country, engagement counts, author, publish time). Error/empty result paths can switch tables or return sample rows.&#x27;,&#x27;Response caveat&#x27;,&#x27;Totals are constants in some platform branches.&#x27;],
+        &#x27;response-ui&#x27;:[&#x27;Normalized API response&#x27;,&#x27;Code-derived&#x27;,&#x27;Handler serializes service response as JSON; UI state maps it to paginated cards and tables. Thumbnail endpoint is a separate API route.&#x27;,&#x27;Read route&#x27;,&#x27;GET /api/v1/videos&#x27;],
+        &#x27;postgres-role&#x27;:[&#x27;PostgreSQL role&#x27;,&#x27;Database-verified&#x27;,&#x27;Valv currently exposes user/account and billing metadata, crawler config/stat resources, Instagram source data, Amazon product metadata and video_stats. It does not expose the main deviantly.* commerce tables in its present catalog.&#x27;,&#x27;Verified examples&#x27;,&#x27;deviantly_users · amazon_product · instagram_reels · tiktok_crawler_configs&#x27;],
+        &#x27;clickhouse-role&#x27;:[&#x27;ClickHouse role&#x27;,&#x27;Database-verified&#x27;,&#x27;Large analytical catalog with raw event-like resources, normalized video and creator tables, hourly/daily snapshots, trend analytics and serving tables. API code executes analytical reads here for Video and Live Feed.&#x27;,&#x27;App writes&#x27;,&#x27;No direct Go API write into the ClickHouse serving tables was established in reviewed paths.&#x27;],
+        &#x27;partial-catalog&#x27;:[&#x27;Partial PostgreSQL visibility&#x27;,&#x27;Database-verified&#x27;,&#x27;Valv exposes 15 resource names in the currently connected PostgreSQL datasource. Core Go repository references include deviantly.products, shop, creators and amazon_products, but these are not in that exposed list. Catalog absence is not proof that the tables are absent from the database.&#x27;,&#x27;Interpretation&#x27;,&#x27;Live schema conclusions are bounded to Valv’s exposed connection/catalog.&#x27;],
+        &#x27;yt-crawler&#x27;:[&#x27;YouTube Go crawler&#x27;,&#x27;Code-derived&#x27;,&#x27;Channel and short crawlers use disk shards/JSONL and a shared Bloom-filter dedupe strategy. Kafka flags exist but default false. The Rust extractor’s default glob reads channel shard IDs from data/*.txt.&#x27;,&#x27;Source&#x27;,&#x27;Youtube-Crawler/src/*crawler.go&#x27;],
+        &#x27;edge-yt-files&#x27;:[&#x27;Channel shard file handoff&#x27;,&#x27;Code-derived&#x27;,&#x27;Go channel crawler writes rolling tier shard text files; Rust extractor reads matching text files and treats each valid 24-byte UC-prefixed line as a channel.&#x27;,&#x27;Files&#x27;,&#x27;data/tier-*.txt → extractor data/*.txt&#x27;],
+        &#x27;yt-extractor&#x27;:[&#x27;Rust YouTube Shorts extractor&#x27;,&#x27;Code-derived&#x27;,&#x27;Startup applies idempotent schema.sql, scans each channel shard with saved per-file state, queries current Shorts, records new IDs, then enriches shorts and refreshes creator metadata. Concurrency/proxy controls are configurable.&#x27;,&#x27;Stages&#x27;,&#x27;scan → Postgres insert → enrich → publish&#x27;],
+        &#x27;edge-yt-pg&#x27;:[&#x27;Extractor → staging rows&#x27;,&#x27;Code-derived&#x27;,&#x27;Scanner inserts new video_id/channel_id rows in batches. Enricher fetches metadata and updates shorts; creator refresh is skipped when fresh and writes daily creator stats.&#x27;,&#x27;Retry behavior&#x27;,&#x27;Scan state, enrichment error/attempt fields and upserts are source-backed.&#x27;],
+        &#x27;yt-pg&#x27;:[&#x27;YouTube extractor PostgreSQL&#x27;,&#x27;Code-derived&#x27;,&#x27;Schema is applied at process startup and contains youtube_shorts/youtube_creators plus publish markers. This extractor’s DB is not shown to be the same schema/pool as the Go app’s primary DB.&#x27;,&#x27;Important distinction&#x27;,&#x27;The extractor’s Postgres rows are not the same name as ClickHouse youtube_shorts.&#x27;],
+        &#x27;edge-yt-kafka&#x27;:[&#x27;PG staged rows → Kafka&#x27;,&#x27;Code-derived&#x27;,&#x27;Publisher selects enriched rows missing a published marker, sends keyed records with acks/idempotence enabled, and only then stores the Kafka acknowledgement time. Crash after broker ack before PG mark can resend; consumers must deduplicate.&#x27;,&#x27;Delivery&#x27;,&#x27;At least once, duplicate tolerant&#x27;],
+        &#x27;yt-kafka&#x27;:[&#x27;YouTube topics&#x27;,&#x27;Code-derived&#x27;,&#x27;Rust flows publish video and creator events to youtube.shorts and youtube.creators. Publisher loops retry after failures and recreate a producer on fatal state.&#x27;,&#x27;Source&#x27;,&#x27;youtube-short-extractor/src/publish.rs&#x27;],
+        &#x27;edge-yt-ch&#x27;:[&#x27;YouTube topic → ClickHouse&#x27;,&#x27;Unresolved pipeline gap&#x27;,&#x27;ClickHouse catalog has YouTube raw/parsed/serving resources and the API reads youtube_shorts_1000plus. Repository source establishes the producer topics, but not which consumer reads them, how rows are transformed, or whether this topic is the source.&#x27;,&#x27;Need&#x27;,&#x27;Consumer repo/config + ClickHouse DDL + Kafka topic mapping&#x27;],
+        &#x27;youtube-serving&#x27;:[&#x27;YouTube API read table&#x27;,&#x27;Database-verified + code-derived&#x27;,&#x27;Valv schema describes id/date/channel/title/description/category/keywords and engagement counts. Go video service queries youtube_shorts_1000plus. This confirms a serving schema/read path, not that the extractor publisher populates it.&#x27;,&#x27;Table&#x27;,&#x27;default.youtube_shorts_1000plus&#x27;],
+        &#x27;tt-shop-crawler&#x27;:[&#x27;TikTok Shop crawler&#x27;,&#x27;Code-derived&#x27;,&#x27;Separate Node crawler/enricher project. Enriched entities use transactional PostgreSQL upserts and enqueue outbox events in the same transaction where code calls the helper.&#x27;,&#x27;Entity groups&#x27;,&#x27;seller · product · video · creator&#x27;],
+        &#x27;edge-tt-pg&#x27;:[&#x27;Crawler → tiktok_shop PostgreSQL&#x27;,&#x27;Code-derived&#x27;,&#x27;Repository includes migration DDL and DB helper SQL for tiktok_shop entities and kafka_outbox. Do not confuse this schema with the Go API’s deviantly.* repositories.&#x27;,&#x27;Evidence&#x27;,&#x27;TikTok-Shop-Crawler/database/*.sql · src/utils/db.js&#x27;],
+        &#x27;tt-shop-pg&#x27;:[&#x27;TikTok Shop PostgreSQL + outbox&#x27;,&#x27;Code-derived&#x27;,&#x27;Outbox stores entity type/id and payload with publish/error metadata. Transactional outbox protects the database write from being separated from queue insertion. Valv PG list does not currently expose these names.&#x27;,&#x27;Caveat&#x27;,&#x27;No live database verification for these schema objects in this walkthrough.&#x27;],
+        &#x27;edge-tt-kafka&#x27;:[&#x27;Outbox → Kafka publisher&#x27;,&#x27;Unresolved pipeline gap&#x27;,&#x27;A publisher helper and scripts/publish-kafka.js exist. Calls to deliverOutboxBatch are not located elsewhere in the checked repository, so scheduling/continuous operation is unverified.&#x27;,&#x27;Need&#x27;,&#x27;Process manager, cron, deployment manifest or runtime logs&#x27;],
+        &#x27;tt-shop-kafka&#x27;:[&#x27;TikTok Shop publisher&#x27;,&#x27;Code-derived&#x27;,&#x27;Script reads pending outbox rows, sends to a configured topic, marks acknowledged events published, and can quarantine oversized events. Presence of script does not establish it runs in production.&#x27;,&#x27;Evidence&#x27;,&#x27;src/utils/kafka-publisher.js · scripts/publish-kafka.js&#x27;],
+        &#x27;ig-crawler&#x27;:[&#x27;Instagram crawler set&#x27;,&#x27;Code-derived&#x27;,&#x27;Repository contains many experimental/operational harvesters. The inspected UA pipeline persists reel metadata to PostgreSQL; other scripts use different strategies and may write to other stores. This map follows one evidenced PG path only.&#x27;,&#x27;Source&#x27;,&#x27;instagram-crawler/src/bin/ua_pipeline.rs&#x27;],
+        &#x27;edge-ig-pg&#x27;:[&#x27;Instagram pipeline → PostgreSQL&#x27;,&#x27;Code-derived&#x27;,&#x27;Selected UA pipeline upserts reels keyed by primary key and creator rows. Other Instagram code also upserts reels; current live PG catalog confirms a compatible reel schema.&#x27;,&#x27;Fields&#x27;,&#x27;shortcode · author · caption · taken_at · media URLs · counts&#x27;],
+        &#x27;ig-pg&#x27;:[&#x27;Instagram PostgreSQL&#x27;,&#x27;Database-verified&#x27;,&#x27;Valv describes reels with primary key, shortcode, author, caption/time, media URLs, engagement counts, duration and raw JSON.&#x27;,&#x27;Resource&#x27;,&#x27;instagram_reels&#x27;],
+        &#x27;edge-ig-ch&#x27;:[&#x27;Instagram PG → ClickHouse&#x27;,&#x27;Unresolved pipeline gap&#x27;,&#x27;Both stores expose Instagram reel resources; Go API queries ClickHouse. The inspected crawler writes PostgreSQL and no checked path establishes replication/consumer synchronization between these resources.&#x27;,&#x27;Need&#x27;,&#x27;Deployed bridge/loader config or source DDL&#x27;],
+        &#x27;ig-ch&#x27;:[&#x27;ClickHouse Instagram API table&#x27;,&#x27;Database-verified + code-derived&#x27;,&#x27;Valv confirms typed Instagram reels and metrics resources. Go video SQL reads default.instagram_reels and joins metrics. Relation and freshness of PG→CH copy are not established.&#x27;,&#x27;Resources&#x27;,&#x27;instagram_reels · instagram_reel_metrics&#x27;],
+        &#x27;amazon-crawler&#x27;:[&#x27;Amazon batch scanner&#x27;,&#x27;Code-derived + database-verified&#x27;,&#x27;Rust batchscan scans prefixes and upserts matched ASIN metadata into amazon_product. Valv describes its title, image, price, merchant, rating, review and source fields.&#x27;,&#x27;Source write&#x27;,&#x27;amazon-crawler/src/bin/batchscan.rs&#x27;],
+        &#x27;edge-amazon-api&#x27;:[&#x27;Amazon scanner rows → product API&#x27;,&#x27;Unresolved pipeline gap&#x27;,&#x27;The scanner writes public table amazon_product, while Go repository SQL refers to deviantly.amazon_products and the Amazon include path is disabled in the inspected list code. A view/replication mapping is not proven.&#x27;,&#x27;Need&#x27;,&#x27;Schema/view mapping + enabled API path&#x27;],
+        &#x27;amazon-api&#x27;:[&#x27;Amazon product repository query&#x27;,&#x27;Code-derived&#x27;,&#x27;Repository includes SQL against deviantly.amazon_products, but the inspected route path sets includeAMZ false. Valv catalog exposes amazon_product as a separate PG resource name.&#x27;,&#x27;Risk&#x27;,&#x27;Crawled metadata may not appear in product API until mapping is confirmed.&#x27;],
+        &#x27;system-users&#x27;:[&#x27;Product users&#x27;,&#x27;Code-derived&#x27;,&#x27;Users enter through the React application, public marketing/lead site, or API clients. The product UI and landing site are separate frontend projects and deployment units.&#x27;,&#x27;Entry surfaces&#x27;,&#x27;deviantly-ui · deviantly-landing-page&#x27;],
+        &#x27;system-edge-web&#x27;:[&#x27;Browser → web application&#x27;,&#x27;Code-derived&#x27;,&#x27;The app UI resolves pages from query-tab state and in-memory selected entity IDs. Landing pages are static SvelteKit output served through Express.&#x27;,&#x27;Request type&#x27;,&#x27;HTML/static assets then page-specific HTTP requests&#x27;],
+        &#x27;system-webs&#x27;:[&#x27;Web applications&#x27;,&#x27;Code-derived&#x27;,&#x27;React product UI talks to the Go API for application features; SvelteKit/Express landing site saves demo and waitlist submissions through its own DB pool.&#x27;,&#x27;Repositories&#x27;,&#x27;deviantly-ui · deviantly-landing-page&#x27;],
+        &#x27;system-edge-api&#x27;:[&#x27;Product UI → Go API&#x27;,&#x27;Code-derived&#x27;,&#x27;The product UI calls /api/v1 routes. The landing service does not route product requests through this Go API; it serves its own landing endpoints.&#x27;,&#x27;API boundary&#x27;,&#x27;Go server defaults to port 8081; frontend base URL varies by UI port/config.&#x27;],
+        &#x27;system-api&#x27;:[&#x27;Go API&#x27;,&#x27;Code-derived&#x27;,&#x27;Chi mounts handler groups for products, shops, brands, creators, videos, trend, live-feed, insights, live-selling, auth, AI, media, viral ideas and research. Handlers may use different stores.&#x27;,&#x27;Entrypoint&#x27;,&#x27;deviantly-server/cmd/api/main.go&#x27;],
+        &#x27;system-edge-stores&#x27;:[&#x27;Go handlers → databases/services&#x27;,&#x27;Code-derived&#x27;,&#x27;Data routing is per handler: core commerce repositories use PostgreSQL, video/livefeed services use ClickHouse HTTP, trend leaderboard uses a separate EchoTik PostgreSQL pool, while media/research call external services/files.&#x27;,&#x27;Architecture note&#x27;,&#x27;No single repository layer abstracts all database backends.&#x27;],
+        &#x27;system-readplanes&#x27;:[&#x27;Application read planes&#x27;,&#x27;Code-derived + database-verified&#x27;,&#x27;Primary PostgreSQL, ClickHouse, and EchoTik PostgreSQL are distinct connection pools in source. The exact deployed host/database selected by environment variables is not established for all crawler projects.&#x27;,&#x27;Key separation&#x27;,&#x27;Primary DATABASE_URL · CLICKHOUSE_URL · ECHOTIK_DATABASE_URL&#x27;],
+        &#x27;system-youtube&#x27;:[&#x27;YouTube subprojects&#x27;,&#x27;Code-derived&#x27;,&#x27;Go discovery writes channel/short shards. Rust extractor reads channel shard files, scans and enriches Shorts into its own PostgreSQL schema, then publishes youtube.shorts and youtube.creators.&#x27;,&#x27;Source projects&#x27;,&#x27;Youtube-Crawler → youtube-short-extractor&#x27;],
+        &#x27;system-edge-youtube&#x27;:[&#x27;YouTube Kafka → ClickHouse serving&#x27;,&#x27;Unresolved pipeline gap&#x27;,&#x27;ClickHouse has YouTube raw/parsed/serving objects and API reads youtube_shorts_1000plus, but the exact topic consumer, transform and destination relation is not in the checked source.&#x27;,&#x27;Need to confirm&#x27;,&#x27;Kafka consumer deployment + ClickHouse DDL + topic mapping&#x27;],
+        &#x27;system-kafka-ch&#x27;:[&#x27;Kafka and ClickHouse event plane&#x27;,&#x27;Database-verified + inferred flow&#x27;,&#x27;Valv catalog includes raw kafka_* names and parsed mv_kafka_* resources; API reads ClickHouse serving tables. Table columns are verified, but engines, MV definitions, deployment wiring and freshness are not.&#x27;,&#x27;Layer types&#x27;,&#x27;Raw payload → typed event fields → serving/aggregate resources (exact links unverified)&#x27;],
+        &#x27;system-edge-ch-api&#x27;:[&#x27;ClickHouse → Go read APIs&#x27;,&#x27;Code-derived&#x27;,&#x27;Video and live-feed services issue HTTP SQL queries to ClickHouse and serialize result rows. The trend matrix is an exception: its list/live handlers use in-memory samples rather than trend_metrics.&#x27;,&#x27;Main consumers&#x27;,&#x27;/api/v1/videos · /api/v1/live-feed · trend leaderboard uses separate EchoTik PG&#x27;],
+        &#x27;system-video-api&#x27;:[&#x27;Video / Live Feed products&#x27;,&#x27;Code-derived&#x27;,&#x27;Video Explorer and Live Feed read the ClickHouse path. Trend leaderboard reads EchoTik PG; Trend matrix uses hard-coded/in-memory cluster and live-arrival samples. Distinct pages therefore have distinct lineage.&#x27;,&#x27;Provenance risk&#x27;,&#x27;Fallback sample rows and fixed totals can make database errors look like populated results.&#x27;],
+        &#x27;system-tiktok&#x27;:[&#x27;TikTok Shop crawler&#x27;,&#x27;Code-derived&#x27;,&#x27;Crawler/enricher code writes seller, product, creator and video schemas under tiktok_shop and enqueues transactional outbox events. A separate Kafka publisher script exists.&#x27;,&#x27;Boundary&#x27;,&#x27;No Go API query against tiktok_shop was found; the Go shop/product API uses deviantly.* SQL.&#x27;],
+        &#x27;system-edge-tt&#x27;:[&#x27;TikTok Shop outbox → production event consumers&#x27;,&#x27;Unresolved pipeline gap&#x27;,&#x27;Publisher script can deliver outbox events to a configured Kafka topic, but repository evidence does not establish its production scheduling or any consumer into ClickHouse/API serving tables.&#x27;,&#x27;Required evidence&#x27;,&#x27;Running process/scheduler + topic configuration + downstream consumer/DDL&#x27;],
+        &#x27;system-instagram&#x27;:[&#x27;Instagram crawler&#x27;,&#x27;Code-derived + database-verified&#x27;,&#x27;Selected crawler code writes Instagram reel/creator data to PostgreSQL, and Valv confirms the reel schema. Separate ClickHouse Instagram tables exist and Go video queries them.&#x27;,&#x27;Boundary&#x27;,&#x27;Do not infer replication from matching table names.&#x27;],
+        &#x27;system-edge-ig&#x27;:[&#x27;Instagram PostgreSQL → ClickHouse&#x27;,&#x27;Unresolved pipeline gap&#x27;,&#x27;No checked pipeline establishes synchronization between the crawler’s PG instagram_reels and ClickHouse instagram_reels/mv resources.&#x27;,&#x27;Required evidence&#x27;,&#x27;Loader/consumer config, DDL and deployed freshness checks&#x27;],
+        &#x27;system-amazon&#x27;:[&#x27;Amazon crawler&#x27;,&#x27;Code-derived + database-verified&#x27;,&#x27;Batch scanner upserts metadata into PG amazon_product; Valv confirms columns. Product repository code queries deviantly.amazon_products and the inspected Amazon include path is disabled.&#x27;,&#x27;Boundary&#x27;,&#x27;Possible schema/view/instance mismatch; deployment mapping is unverified.&#x27;],
+        &#x27;system-edge-amz&#x27;:[&#x27;Amazon crawler → product API&#x27;,&#x27;Unresolved pipeline gap&#x27;,&#x27;The crawler’s table and API repository table names differ. A database view, sync or compatible production schema was not established in source/Valv catalog.&#x27;,&#x27;Required evidence&#x27;,&#x27;Resolve table mapping and enable/verify serving query&#x27;],
+        &#x27;system-commerce-api&#x27;:[&#x27;Commerce API repositories&#x27;,&#x27;Code-derived&#x27;,&#x27;Product, shop, creator, brand, hook, insight and auth repositories are wired over the main PG pool and query deviantly.* names. Valv’s PG catalog exposes only a subset of the code-named schema.&#x27;,&#x27;Catalog limit&#x27;,&#x27;Current Valv resource list is partial; absence there does not prove production absence.&#x27;],
+        &#x27;system-postgres&#x27;:[&#x27;PostgreSQL deployments&#x27;,&#x27;Code-derived + database-verified&#x27;,&#x27;Several projects use DATABASE_URL and may point to the same physical PG deployment, but separate project configs and schema names do not prove that they share host/database/role at runtime.&#x27;,&#x27;Valv-observed examples&#x27;,&#x27;deviantly_users · instagram_reels · amazon_product · crawler metadata tables&#x27;],
+        &#x27;system-external&#x27;:[&#x27;External services&#x27;,&#x27;Code-derived&#x27;,&#x27;EchoTik DB, MCP endpoint, AI provider(s), and product-research proxy are external dependencies in relevant page flows. Landing optionally posts a webhook after persisting a lead.&#x27;,&#x27;Operational implication&#x27;,&#x27;Availability, credentials, timeout and rate limits vary by dependency.&#x27;],
+        &#x27;system-catalog&#x27;:[&#x27;Evidence and scope&#x27;,&#x27;Database-verified&#x27;,&#x27;Valv currently exposes a partial PostgreSQL resource catalog and a broad ClickHouse catalog. Describe-resource verifies fields; it does not provide full DDL, engine type, view definitions, row freshness, or cross-database lineage.&#x27;,&#x27;Review scope&#x27;,&#x27;Repository source + read-only Valv schema inspection&#x27;]
+      };
+      const pageFlows=[
+        {group:&#x27;Discovery and trends&#x27;,page:&#x27;Video Explorer&#x27;,route:&#x27;GET /api/v1/videos · /ai-rewrite · /{id} · /thumbnail&#x27;,backend:&#x27;Video handler → platform-specific ClickHouse SQL; optional query rewrite via external AI endpoint.&#x27;,target:&#x27;ClickHouse videos_500plus / videos_flat, youtube_shorts_1000plus, instagram_reels + metrics. Empty/error paths can fall back to sample cards and fixed totals.&#x27;,source:&#x27;deviantly-ui/src/features/videos · deviantly-server/internal/video&#x27;},
+        {group:&#x27;Discovery and trends&#x27;,page:&#x27;Trend leaderboard&#x27;,route:&#x27;GET /api/v1/trend/leaderboard · /dates · /stats&#x27;,backend:&#x27;Trend handler → separate EchoTik PostgreSQL repository. Filters board, region, period, snapshot date, search and page.&#x27;,target:&#x27;leaderboard_videos JSON payloads in separate EchoTik PostgreSQL connection; not ClickHouse.&#x27;,source:&#x27;deviantly-server/internal/trend/repository.go&#x27;},
+        {group:&#x27;Discovery and trends&#x27;,page:&#x27;Trending hashtags&#x27;,route:&#x27;GET /api/v1/trend/hashtags&#x27;,backend:&#x27;Trend handler → EchoTik PostgreSQL repository; applies search, region and pagination.&#x27;,target:&#x27;EchoTik PostgreSQL hashtag query path. Live Valv catalog does not establish this separate DB schema.&#x27;,source:&#x27;deviantly-server/internal/trend/handler.go · repository.go&#x27;},
+        {group:&#x27;Discovery and trends&#x27;,page:&#x27;Trend matrix&#x27;,route:&#x27;GET /api/v1/trend then poll /api/v1/trend/live every 3.2 sec&#x27;,backend:&#x27;Trend handler filters in-memory MasterClusters and rotates sample arrivals; not the ClickHouse trend_metrics reader.&#x27;,target:&#x27;Static/in-memory cluster definitions and dynamic wall-clock-derived telemetry. trend_metrics table exists, but no serving link from this handler was found.&#x27;,source:&#x27;deviantly-ui/src/features/trend/trend-page.tsx · deviantly-server/internal/trend/handler.go&#x27;},
+        {group:&#x27;Discovery and trends&#x27;,page:&#x27;Live Feed&#x27;,route:&#x27;GET /api/v1/live-feed · /stats&#x27;,backend:&#x27;Livefeed handler/client queries ClickHouse HTTP; in-process cache retains feed pages, count ranges and viral rows.&#x27;,target:&#x27;ClickHouse videos, youtube_shorts, instagram_reels, videos_500plus and youtube_shorts_1000plus query paths; UI uses HTTP polling.&#x27;,source:&#x27;deviantly-ui/src/features/live-feed · deviantly-server/internal/livefeed&#x27;},
+        {group:&#x27;Discovery and trends&#x27;,page:&#x27;Live Selling&#x27;,route:&#x27;GET /api/v1/live-selling (filters, page, limit)&#x27;,backend:&#x27;Live selling handler reads deviantly.live_streams from the main PostgreSQL pool; falls back to fixture data when the pool/query is unavailable or the unfiltered query returns no rows.&#x27;,target:&#x27;Main PostgreSQL deviantly.live_streams; fixture fallback can make the UI appear populated when production reads are empty.&#x27;,source:&#x27;deviantly-ui/src/features/live-selling · deviantly-server/internal/live-selling/handler.go&#x27;},
+        {group:&#x27;Discovery and trends&#x27;,page:&#x27;Live Selling Detail&#x27;,route:&#x27;GET /live-selling/{id} · /timeline · /products&#x27;,backend:&#x27;Selecting a stream moves the app into detail state and loads summary, timeline and product endpoints.&#x27;,target:&#x27;Go Live Selling handler with PostgreSQL and fixture fallback paths.&#x27;,source:&#x27;deviantly-ui/src/features/live-selling-detail · deviantly-server/internal/live-selling/handler.go&#x27;},
+        {group:&#x27;Product research and commerce&#x27;,page:&#x27;Trending Products&#x27;,route:&#x27;GET /api/v1/products&#x27;,backend:&#x27;Product handler → main PostgreSQL repository; list filters, pagination and optional category/market conditions.&#x27;,target:&#x27;Go SQL references deviantly.products and related deviantly.* schema. Valv’s exposed PG resource catalog currently omits these core schema names.&#x27;,source:&#x27;deviantly-server/internal/product/repository.go&#x27;},
+        {group:&#x27;Product research and commerce&#x27;,page:&#x27;Product Detail&#x27;,route:&#x27;GET /products/{id}, /overview, /creators, /market-insights, /similar&#x27;,backend:&#x27;Product page loads base detail then tab-specific endpoints through cached fetches.&#x27;,target:&#x27;Main PostgreSQL product repository queries; Amazon include path disabled in inspected list code, and amazon_product → deviantly.amazon_products join is unverified.&#x27;,source:&#x27;deviantly-ui/src/features/product-detail · deviantly-server/internal/product&#x27;},
+        {group:&#x27;Product research and commerce&#x27;,page:&#x27;Market Explorer&#x27;,route:&#x27;GET /api/v1/products/market-search (list, IDs, keyword query)&#x27;,backend:&#x27;Product handler MarketSearch → product repository search.&#x27;,target:&#x27;PostgreSQL product/market schema in Go query path; Valv exposure of those core tables is partial.&#x27;,source:&#x27;deviantly-ui/src/features/market-explorer · deviantly-server/internal/product&#x27;},
+        {group:&#x27;Product research and commerce&#x27;,page:&#x27;Product Research&#x27;,route:&#x27;GET /reports · /reports/{id}; POST /jobs; GET /jobs/{id}; UI also requests /suppliers&#x27;,backend:&#x27;Service loads local JSON saved reports and proxies job creation/status to PRODUCT_RESEARCH_URL. The checked-in handler does not mount /suppliers, despite the UI request.&#x27;,target:&#x27;Report files/in-memory maps + external report service; service also has ClickHouse configuration. Persistence and deployed proxy destination need runtime confirmation.&#x27;,source:&#x27;deviantly-ui/src/features/product-research · deviantly-server/internal/productresearch&#x27;},
+        {group:&#x27;Product research and commerce&#x27;,page:&#x27;Trending Shops&#x27;,route:&#x27;GET /api/v1/shops · /categories&#x27;,backend:&#x27;Shop handler → main PostgreSQL repository; query, category and page controls shape request.&#x27;,target:&#x27;Go queries deviantly.* shop tables. Valv’s current PG catalog does not expose these core tables.&#x27;,source:&#x27;deviantly-ui/src/features/trending-shops · deviantly-server/internal/shop&#x27;},
+        {group:&#x27;Product research and commerce&#x27;,page:&#x27;Shop Detail&#x27;,route:&#x27;GET /shops/{id} · /products · /creators · /videos · /info&#x27;,backend:&#x27;Shop detail loads base data and selected tab; child lists paginate independently.&#x27;,target:&#x27;Main PostgreSQL shop repository and related product/creator/video tables; may return empty or fallback data on unavailable DB.&#x27;,source:&#x27;deviantly-ui/src/features/shop-detail · deviantly-server/internal/shop&#x27;},
+        {group:&#x27;Product research and commerce&#x27;,page:&#x27;Trending Brands&#x27;,route:&#x27;GET /api/v1/brands · /categories&#x27;,backend:&#x27;Brand handler → main PostgreSQL repository; filters and pagination.&#x27;,target:&#x27;Go queries deviantly.* brand/product video schemas; Valv PG resource exposure is partial.&#x27;,source:&#x27;deviantly-ui/src/features/trending-brands · deviantly-server/internal/brand&#x27;},
+        {group:&#x27;Product research and commerce&#x27;,page:&#x27;Brand Detail&#x27;,route:&#x27;GET /brands/{id} · /products · /creators · /videos · /info&#x27;,backend:&#x27;Brand detail loads overview and active tab endpoint.&#x27;,target:&#x27;Main PostgreSQL brand repository and related entity joins.&#x27;,source:&#x27;deviantly-ui/src/features/brand-detail · deviantly-server/internal/brand&#x27;},
+        {group:&#x27;Creator and content intelligence&#x27;,page:&#x27;Creators&#x27;,route:&#x27;GET /api/v1/creators · /stats&#x27;,backend:&#x27;Creator handler → main PostgreSQL repository; list query and metrics.&#x27;,target:&#x27;deviantly.* creator schema referenced in Go source; not listed in current Valv PG resources.&#x27;,source:&#x27;deviantly-ui/src/features/creators · deviantly-server/internal/creator&#x27;},
+        {group:&#x27;Creator and content intelligence&#x27;,page:&#x27;Creator Detail&#x27;,route:&#x27;GET /creators/{id}/overview · /content-performance · /audience · /videos&#x27;,backend:&#x27;Loads overview/base record, then cached performance/audience tabs and paginated videos.&#x27;,target:&#x27;Main PostgreSQL creator and content repository path; backend query shapes differ per tab.&#x27;,source:&#x27;deviantly-ui/src/features/creator-detail · deviantly-server/internal/creator&#x27;},
+        {group:&#x27;Creator and content intelligence&#x27;,page:&#x27;Viral Hooks&#x27;,route:&#x27;GET /api/v1/hooks · /stats · /categories&#x27;,backend:&#x27;Hook handler → PostgreSQL repository list, stats and category filters.&#x27;,target:&#x27;Main PG hookest repository path. Detail navigation selects a hook ID in client state.&#x27;,source:&#x27;deviantly-ui/src/features/viral-hooks · deviantly-server/internal/hookest&#x27;},
+        {group:&#x27;Creator and content intelligence&#x27;,page:&#x27;Hook Detail&#x27;,route:&#x27;GET /hooks/{id} · /comments · /related&#x27;,backend:&#x27;Three detail requests load hook, comments and related hooks; comments/related failures are caught as empty arrays in UI.&#x27;,target:&#x27;Hookest PostgreSQL repository detail queries.&#x27;,source:&#x27;deviantly-ui/src/features/viral-hooks/hook-detail-page.tsx&#x27;},
+        {group:&#x27;Creator and content intelligence&#x27;,page:&#x27;Viral Ideas&#x27;,route:&#x27;POST /api/v1/viral-ideas/normalize · /search; may call external MCP endpoint&#x27;,backend:&#x27;Search service combines livefeed client and product repository; browser service also calls MCP endpoint for parts of the workflow.&#x27;,target:&#x27;ClickHouse livefeed video search + main PostgreSQL product lookups + external MCP result path; data lineage depends on selected search mode.&#x27;,source:&#x27;deviantly-ui/src/features/viral-ideas · deviantly-server/internal/viralideas&#x27;},
+        {group:&#x27;Creator and content intelligence&#x27;,page:&#x27;Viral Content&#x27;,route:&#x27;GET /api/v1/insight-spotlight/videos&#x27;,backend:&#x27;Page sends platform/category/search/paging filters to the insight-spotlight handler.&#x27;,target:&#x27;Insight repository backed by main PostgreSQL; Valv catalog does not expose core insight schema names.&#x27;,source:&#x27;deviantly-ui/src/features/viral-content · deviantly-server/internal/insight&#x27;},
+        {group:&#x27;Creator and content intelligence&#x27;,page:&#x27;Insight Spotlight&#x27;,route:&#x27;GET /industries · /demographics · /hashtags · /videos&#x27;,backend:&#x27;Shared insight-spotlight API powers the overview and audience pages; selected industry/platform/hashtag become request filters.&#x27;,target:&#x27;Main PostgreSQL insight repository; UI subpages are routed to the same InsightSpotlightPage component.&#x27;,source:&#x27;deviantly-ui/src/features/insight-spotlight · deviantly-server/internal/insight&#x27;},
+        {group:&#x27;Creator and content intelligence&#x27;,page:&#x27;Audience Interests&#x27;,route:&#x27;GET /insight-spotlight/industries · /hashtags · /videos&#x27;,backend:&#x27;Audience interest page fetches industry options, paged hashtags and selected-tag video samples.&#x27;,target:&#x27;Insight repository PostgreSQL queries.&#x27;,source:&#x27;deviantly-ui/src/features/audience-interests · deviantly-server/internal/insight&#x27;},
+        {group:&#x27;Creator and content intelligence&#x27;,page:&#x27;Audience Demographics&#x27;,route:&#x27;GET /insight-spotlight/industries · /demographics?industry_id=…&#x27;,backend:&#x27;Fetches industry list, then demographics for the selected industry.&#x27;,target:&#x27;Insight repository PostgreSQL demographics query.&#x27;,source:&#x27;deviantly-ui/src/features/audience-demographics · deviantly-server/internal/insight&#x27;},
+        {group:&#x27;Creator and content intelligence&#x27;,page:&#x27;Top Ads&#x27;,route:&#x27;GET /api/v1/top-ads · /selling-points · /stats&#x27;,backend:&#x27;Top Ads handler → main PostgreSQL repository; UI sends filters and pagination.&#x27;,target:&#x27;PostgreSQL top_ads repository query path.&#x27;,source:&#x27;deviantly-ui/src/features/top-ads · deviantly-server/internal/topads&#x27;},
+        {group:&#x27;Creator and content intelligence&#x27;,page:&#x27;Media Studio&#x27;,route:&#x27;POST /api/v1/media/inspect · /generate · /video/generate; GET task /image&#x27;,backend:&#x27;Go media handler streams image generation progress, creates video tasks, serves generated assets and task status.&#x27;,target:&#x27;External AI/media providers plus local upload/task state and image files; durable storage/provider configuration requires deployment verification.&#x27;,source:&#x27;deviantly-ui/src/features/media-studio · deviantly-server/internal/media&#x27;},
+        {group:&#x27;Account and operations&#x27;,page:&#x27;Authentication&#x27;,route:&#x27;POST /auth/login · /register · /google · /logout; GET /me&#x27;,backend:&#x27;Auth handler verifies credentials/token and calls auth repository; Google auth also uses identity provider flow.&#x27;,target:&#x27;Main PostgreSQL user/account metadata; user table mapping should be verified against actual deployment schema.&#x27;,source:&#x27;deviantly-ui/src/features/auth · deviantly-server/internal/auth&#x27;},
+        {group:&#x27;Account and operations&#x27;,page:&#x27;Admin&#x27;,route:&#x27;GET /auth/admin/users; POST approve · block · role · delete; verify-passkey&#x27;,backend:&#x27;Admin page sends admin operations to auth endpoints; API checks passkey and role/access behavior.&#x27;,target:&#x27;PostgreSQL auth/user repository. Current UI sends passkey in a query parameter, exposing it to URL logging/history; move it to a protected header and rotate the credential.&#x27;,source:&#x27;deviantly-ui/src/features/admin/admin-page.tsx · deviantly-server/internal/auth&#x27;},
+        {group:&#x27;Account and operations&#x27;,page:&#x27;Landing site forms&#x27;,route:&#x27;POST /api/v1/demo · /waitlist on separate Express service&#x27;,backend:&#x27;Express validates and rate-limits form data, deduplicates recent demo requests, saves booking then optionally fires webhook.&#x27;,target:&#x27;Landing PostgreSQL bookings/waitlist tables; separate from app API DB pools.&#x27;,source:&#x27;deviantly-landing-page/server.js&#x27;}
+      ];
+      const pageList=root.querySelector(&#x27;#page-flow-list&#x27;);
+      let currentGroup=&#x27;&#x27;;
+      for(const page of pageFlows){
+        if(page.group!==currentGroup){const heading=document.createElement(&#x27;div&#x27;);heading.className=&#x27;lane-title&#x27;;heading.textContent=page.group;pageList.append(heading);currentGroup=page.group;}
+        const lane=document.createElement(&#x27;div&#x27;);lane.className=&#x27;lane&#x27;;
+        const title=document.createElement(&#x27;div&#x27;);title.className=&#x27;lane-title&#x27;;title.textContent=page.page;lane.append(title);
+        const flow=document.createElement(&#x27;div&#x27;);flow.className=&#x27;flow&#x27;;lane.append(flow);pageList.append(lane);
+        const fields=[[&#x27;page&#x27;,page.page,&#x27;Website page&#x27;,&#x27;UI navigation, query/filter state, and page-specific requests.&#x27;],[&#x27;api&#x27;,&#x27;API route&#x27;,page.route,page.backend],[&#x27;data&#x27;,&#x27;Service / data source&#x27;,page.target,page.source]];
+        for(let i=0;i&lt;fields.length;i++){
+          if(i){const edge=document.createElement(&#x27;button&#x27;);edge.type=&#x27;button&#x27;;edge.className=&#x27;edge&#x27;;edge.dataset.key=`page-${page.page}-edge-${i}`;edge.innerHTML=&#x27;&lt;b&gt;→&lt;/b&gt;&lt;small&gt;request / response&lt;/small&gt;&#x27;;flow.append(edge);info[edge.dataset.key]=[`${page.page} · ${i===1?&#x27;UI to API&#x27;:&#x27;API to data&#x27;}`,&#x27;Code-derived&#x27;,i===1?`The page sends the route and parameters below; the backend response returns data for this page’s state.`:`The handler/service applies the request’s filters, calls the identified source, and maps the result back to a JSON response.`,&#x27;Flow step&#x27;,i===1?page.route:page.target];}
+          const [suffix,label,value,description]=fields[i];const key=`page-${page.page}-${suffix}`;
+          const node=document.createElement(&#x27;button&#x27;);node.type=&#x27;button&#x27;;node.className=&#x27;node&#x27;;node.dataset.key=key;node.innerHTML=`&lt;span class=&quot;kind&quot;&gt;${label}&lt;/span&gt;&lt;strong&gt;&lt;/strong&gt;&lt;small&gt;&lt;/small&gt;`;node.querySelector(&#x27;strong&#x27;).textContent=i===0?page.page:label;node.querySelector(&#x27;small&#x27;).textContent=value;flow.append(node);
+          const certainty=i===2&amp;&amp;/Unresolved|uncertain|requires deployment|unverified/i.test(value)?&#x27;Connection inferred&#x27;:&#x27;Code-derived&#x27;;
+          info[key]=[`${label} · ${page.page}`,certainty,description,i===0?&#x27;Page and interaction&#x27;:i===1?&#x27;API request and handler&#x27;:&#x27;Data source and caveat&#x27;,value];
+        }
+      }
+      root.querySelectorAll(&#x27;.flow&#x27;).forEach(reserveDetailSlot);
+
+      root.addEventListener(&#x27;click&#x27;,e=&gt;{
+        const tab=e.target.closest(&#x27;button[data-detail-tab]&#x27;);
+        if(tab){
+          root.querySelectorAll(&#x27;button[data-detail-tab]&#x27;).forEach(el=&gt;{const active=el===tab;el.setAttribute(&#x27;aria-selected&#x27;,String(active));el.classList.toggle(&#x27;active&#x27;,active);});
+          root.querySelectorAll(&#x27;[role=&quot;tabpanel&quot;]&#x27;).forEach(panel=&gt;panel.hidden=panel.id!==tab.getAttribute(&#x27;aria-controls&#x27;));
+          return;
+        }
+        const button=e.target.closest(&#x27;button[data-key]&#x27;);if(!button)return;
+        const item=info[button.dataset.key];if(!item)return;
+        root.querySelectorAll(&#x27;button[data-key]&#x27;).forEach(el=&gt;el.setAttribute(&#x27;aria-pressed&#x27;,String(el===button)));
+        reserveDetailSlot(button.closest(&#x27;.flow&#x27;)).append(inspector);
+        root.querySelector(&#x27;#inspect-title&#x27;).textContent=item[0];
+        const status=root.querySelector(&#x27;#inspect-status&#x27;);status.textContent=item[1];status.className=&#x27;status&#x27;+(item[1].includes(&#x27;Unresolved&#x27;)?&#x27; gap&#x27;:item[1].includes(&#x27;Database-verified&#x27;)?&#x27; db&#x27;:item[1].includes(&#x27;inferred&#x27;)?&#x27; inferred&#x27;:&#x27;&#x27;);
+        root.querySelector(&#x27;#inspect-summary&#x27;).textContent=item[2];
+        root.querySelector(&#x27;#inspect-flow-label&#x27;).textContent=item[3];
+        root.querySelector(&#x27;#inspect-flow-value&#x27;).textContent=item[4];
+        root.querySelector(&#x27;#inspect-evidence&#x27;).textContent=item[1].includes(&#x27;Unresolved&#x27;)?&#x27;Unverified connection: the repository, deployment mapping, or DDL does not establish this handoff. Check the listed source and runtime configuration before treating this as production lineage.&#x27;:item[1].includes(&#x27;Database-verified&#x27;)?&#x27;Database fields were checked through Valv; source paths identify how the application reads or writes them where stated. Schema presence alone does not prove freshness or end-to-end lineage.&#x27;:&#x27;Code-derived from the listed repository path. Production deployment and live runtime behavior were not independently confirmed.&#x27;;
+      });
+    })();
+  &lt;/script&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (event) =&gt; {
+    for (const target of event.composedPath()) {
+      if (target?.nodeType === Node.ELEMENT_NODE) {
+        const trigger = target.closest(&quot;[data-tooltip]&quot;);
+        if (trigger) return trigger;
+      }
+    }
+    return null;
+  };
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handlers = {
+    pointerover: handlePointerOpen,
+    pointerdown: handlePointer,
+    pointercancel: handlePointer,
+    click: handleTouchClick,
+    pointerout: handleLeave,
+    focusin: handleFocusIn,
+    focusout: handleLeave,
+    keydown: handleKeyDown,
+    contextmenu: handleContextMenu,
+  };
+  const roots = new Map();
+  const handledEvents = new WeakSet();
+  const handleEvent = (event) =&gt; {
+    if (handledEvents.has(event)) return;
+    handledEvents.add(event);
+    handlers[event.type](event);
+  };
+  const discoverRoots = (node) =&gt; {
+    if (node.shadowRoot) listen(node.shadowRoot);
+    for (const element of node.querySelectorAll(&quot;*&quot;)) {
+      if (element.shadowRoot) listen(element.shadowRoot);
+    }
+  };
+  const listen = (root) =&gt; {
+    if (roots.has(root)) return;
+    for (const type of Object.keys(handlers)) root.addEventListener(type, handleEvent);
+    const observer = new window.MutationObserver((records) =&gt; {
+      for (const { addedNodes } of records) {
+        for (const node of addedNodes) {
+          if (node.nodeType === Node.ELEMENT_NODE) discoverRoots(node);
+        }
+      }
+      for (const [root, cleanup] of roots) {
+        if (root.host &amp;&amp; !root.host.isConnected) {
+          cleanup();
+          roots.delete(root);
+        }
+      }
+      if (activeTrigger &amp;&amp; !activeTrigger.isConnected) closeTooltip(false);
+    });
+    observer.observe(root, { childList: true, subtree: true });
+    roots.set(root, () =&gt; {
+      observer.disconnect();
+      for (const type of Object.keys(handlers)) root.removeEventListener(type, handleEvent);
+    });
+    discoverRoots(root);
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    for (const cleanup of roots.values()) cleanup();
+    roots.clear();
+    tooltip = null;
+  };
+
+  // Events between children of one shadow root never reach the document.
+  listen(document);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-tabs&quot;&gt;
+(() =&gt; {
+  const selector = &#x27;.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]&#x27;;
+  const disabled = &#x27;:disabled,[aria-disabled=&quot;true&quot;]&#x27;;
+  const selectTab = (selected) =&gt; {
+    const panelId = selected.getAttribute(&quot;aria-controls&quot;);
+    for (const tab of selected.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;)) {
+      const active = tab === selected;
+      tab.classList.toggle(&quot;active&quot;, active);
+      tab.setAttribute(&quot;aria-selected&quot;, String(active));
+      const id = tab.getAttribute(&quot;aria-controls&quot;);
+      const panel = id &amp;&amp; document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden &amp;&amp; selected.id) {
+          panel.setAttribute(&quot;aria-labelledby&quot;, selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) =&gt; {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === &quot;click&quot;) {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;),
+    ).filter((candidate) =&gt; !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === &quot;ArrowRight&quot; || event.key === &quot;ArrowDown&quot;) {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === &quot;ArrowLeft&quot; || event.key === &quot;ArrowUp&quot;) {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === &quot;Home&quot;) {
+      next = 0;
+    } else if (event.key === &quot;End&quot;) {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll(&#x27;.nav[role=&quot;tablist&quot;]&#x27;)) {
+    const selected =
+      list.querySelector(&#x27;[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;].active&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;]&#x27;);
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener(&quot;click&quot;, interact);
+  document.addEventListener(&quot;keydown&quot;, interact);
+  window.addEventListener(&quot;pagehide&quot;, () =&gt; {
+    document.removeEventListener(&quot;click&quot;, interact);
+    document.removeEventListener(&quot;keydown&quot;, interact);
+  }, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-carousel&quot;&gt;
+  (() =&gt; {
+    for (const root of document.querySelectorAll(&quot;.viz-carousel&quot;)) {
+      const panels = Array.from(
+        root.querySelectorAll(&quot;:scope &gt; [data-variant]&quot;),
+      );
+      if (panels.length === 0) {
+        continue;
+      }
+      root.setAttribute(&quot;role&quot;, &quot;group&quot;);
+      panels.forEach((panel, index) =&gt; {
+        panel.hidden = index !== 0;
+        panel.setAttribute(&quot;role&quot;, &quot;group&quot;);
+        if (!panel.hasAttribute(&quot;aria-label&quot;)) {
+          panel.setAttribute(&quot;aria-label&quot;, panel.dataset.variant);
+        }
+      });
+      root.dataset.activeVariant = panels[0].dataset.variant;
+      if (panels.length === 1) {
+        continue;
+      }
+
+      const controls = document.createElement(&quot;div&quot;);
+      controls.className = &quot;viz-carousel-controls&quot;;
+      // Portable copy of the settings dropdown&#x27;s legacy glyph; no 14px icon-package preset matches it.
+      // https://github.com/openai/openai/blob/master/codex/codex-apps/webview/src/icons/chevron.svg
+      controls.innerHTML = `
+      &lt;button type=&quot;button&quot; class=&quot;viz-carousel-previous cursor-interaction&quot;&gt;&lt;i data-lucide=&quot;chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;details class=&quot;viz-carousel-picker&quot;&gt;
+        &lt;summary class=&quot;cursor-interaction&quot;&gt;
+          &lt;span class=&quot;viz-carousel-count tabular-nums&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;viz-carousel-name&quot;&gt;&lt;/span&gt;
+          &lt;svg class=&quot;viz-carousel-caret&quot; width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 20 21&quot; fill=&quot;none&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;
+            &lt;path d=&quot;M15.2793 7.71101C15.539 7.45131 15.961 7.45131 16.2207 7.71101C16.4804 7.97071 16.4804 8.39272 16.2207 8.65242L10.4707 14.4024C10.211 14.6621 9.78902 14.6621 9.52932 14.4024L3.77932 8.65242L3.69436 8.54792C3.52385 8.28979 3.55205 7.93828 3.77932 7.71101C4.00659 7.48374 4.3581 7.45554 4.61623 7.62605L4.72073 7.71101L10 12.9903L15.2793 7.71101Z&quot; fill=&quot;currentColor&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;0.6&quot; /&gt;
+          &lt;/svg&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;viz-carousel-options&quot;&gt;&lt;/div&gt;
+      &lt;/details&gt;
+      &lt;button type=&quot;button&quot; class=&quot;viz-carousel-next cursor-interaction&quot;&gt;&lt;i data-lucide=&quot;chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;`;
+      const previous = controls.querySelector(&quot;.viz-carousel-previous&quot;);
+      const next = controls.querySelector(&quot;.viz-carousel-next&quot;);
+      const picker = controls.querySelector(&quot;.viz-carousel-picker&quot;);
+      const summary = picker.querySelector(&quot;summary&quot;);
+      const count = controls.querySelector(&quot;.viz-carousel-count&quot;);
+      const name = controls.querySelector(&quot;.viz-carousel-name&quot;);
+      const options = controls.querySelector(&quot;.viz-carousel-options&quot;);
+      const status = document.createElement(&quot;span&quot;);
+      status.className = &quot;sr-only&quot;;
+      status.setAttribute(&quot;role&quot;, &quot;status&quot;);
+      status.setAttribute(&quot;aria-live&quot;, &quot;polite&quot;);
+      status.setAttribute(&quot;aria-atomic&quot;, &quot;true&quot;);
+      previous.setAttribute(
+        &quot;aria-label&quot;,
+        root.dataset.previousLabel ?? &quot;Previous variant&quot;,
+      );
+      next.setAttribute(&quot;aria-label&quot;, root.dataset.nextLabel ?? &quot;Next variant&quot;);
+
+      let active = 0;
+      let mousePointerId = null;
+      let summaryPointerHandled = false;
+      summary.addEventListener(&quot;pointerdown&quot;, (event) =&gt; {
+        summaryPointerHandled =
+          event.pointerType === &quot;mouse&quot; &amp;&amp; event.button === 0 &amp;&amp; !event.ctrlKey;
+        if (!summaryPointerHandled) {
+          return;
+        }
+        event.preventDefault();
+        summary.focus({ preventScroll: true });
+        picker.open = !picker.open;
+        mousePointerId = picker.open ? event.pointerId : null;
+      });
+      summary.addEventListener(&quot;click&quot;, (event) =&gt; {
+        if (summaryPointerHandled &amp;&amp; event.detail &gt; 0) {
+          event.preventDefault();
+        }
+      });
+      const choices = panels.map((panel, index) =&gt; {
+        const choice = document.createElement(&quot;button&quot;);
+        choice.type = &quot;button&quot;;
+        choice.className = &quot;cursor-interaction&quot;;
+        choice.textContent = panel.dataset.variant;
+        choice.addEventListener(&quot;click&quot;, () =&gt; {
+          select(index);
+          summary.focus();
+        });
+        choice.addEventListener(&quot;pointerup&quot;, (event) =&gt; {
+          if (
+            picker.open &amp;&amp;
+            event.pointerType === &quot;mouse&quot; &amp;&amp;
+            event.button === 0 &amp;&amp;
+            event.pointerId === mousePointerId
+          ) {
+            choice.click();
+          }
+        });
+        options.appendChild(choice);
+        return choice;
+      });
+      const select = (index) =&gt; {
+        const changed = active !== index;
+        active = index;
+        panels.forEach((panel, position) =&gt; {
+          panel.hidden = position !== active;
+          choices[position].setAttribute(
+            &quot;aria-current&quot;,
+            String(position === active),
+          );
+        });
+        root.dataset.activeVariant = panels[active].dataset.variant;
+        count.textContent = `${active + 1} / ${panels.length}`;
+        name.textContent = panels[active].dataset.variant;
+        picker.open = false;
+        mousePointerId = null;
+        if (changed) {
+          status.textContent = `${count.textContent}: ${name.textContent}`;
+        }
+      };
+      previous.addEventListener(&quot;click&quot;, () =&gt;
+        select((active + panels.length - 1) % panels.length),
+      );
+      next.addEventListener(&quot;click&quot;, () =&gt;
+        select((active + 1) % panels.length),
+      );
+      picker.addEventListener(&quot;keydown&quot;, (event) =&gt; {
+        if (event.key === &quot;Escape&quot; &amp;&amp; picker.open) {
+          event.preventDefault();
+          picker.open = false;
+          mousePointerId = null;
+          summary.focus();
+          return;
+        }
+        if (event.altKey || event.ctrlKey || event.metaKey) {
+          return;
+        }
+        const index = choices.indexOf(document.activeElement);
+        let nextIndex;
+        if (event.key === &quot;ArrowDown&quot;) {
+          nextIndex = index &lt; 0 ? active : (index + 1) % choices.length;
+        } else if (event.key === &quot;ArrowUp&quot;) {
+          nextIndex = index &lt; 0 ? active : (index + choices.length - 1) % choices.length;
+        } else if (picker.open &amp;&amp; event.key === &quot;Home&quot;) {
+          nextIndex = 0;
+        } else if (picker.open &amp;&amp; event.key === &quot;End&quot;) {
+          nextIndex = choices.length - 1;
+        } else {
+          return;
+        }
+        event.preventDefault();
+        picker.open = true;
+        choices[nextIndex].focus();
+      });
+      picker.addEventListener(&quot;focusout&quot;, (event) =&gt; {
+        if (!picker.contains(event.relatedTarget)) {
+          picker.open = false;
+          mousePointerId = null;
+        }
+      });
+      const dismiss = (event) =&gt; {
+        if (!summary.contains(event.target)) {
+          mousePointerId = null;
+        }
+        if (!picker.contains(event.target)) {
+          picker.open = false;
+        }
+      };
+      const endPointerSelection = () =&gt; {
+        mousePointerId = null;
+      };
+      const sizePicker = () =&gt; {
+        root.style.setProperty(
+          &quot;--viz-carousel-picker-height&quot;,
+          `${picker.open ? options.offsetHeight : 0}px`,
+        );
+      };
+      picker.addEventListener(&quot;toggle&quot;, sizePicker);
+      window.addEventListener(&quot;resize&quot;, sizePicker);
+      document.addEventListener(&quot;pointerdown&quot;, dismiss);
+      document.addEventListener(&quot;pointerup&quot;, endPointerSelection);
+      document.addEventListener(&quot;pointercancel&quot;, endPointerSelection);
+      window.addEventListener(&quot;blur&quot;, endPointerSelection);
+      window.addEventListener(
+        &quot;pagehide&quot;,
+        () =&gt; {
+          document.removeEventListener(&quot;pointerdown&quot;, dismiss);
+          document.removeEventListener(&quot;pointerup&quot;, endPointerSelection);
+          document.removeEventListener(&quot;pointercancel&quot;, endPointerSelection);
+          window.removeEventListener(&quot;blur&quot;, endPointerSelection);
+          window.removeEventListener(&quot;resize&quot;, sizePicker);
+        },
+        { once: true },
+      );
+      root.append(controls, status);
+      select(0);
+    }
+  })();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+
+<script>(() => {
+  const frame = document.getElementById("codex-visualization");
+  if (!(frame instanceof HTMLIFrameElement)) {
+    return;
+  }
+  let viewportHeight = globalThis.innerHeight;
+  const storageKey = `codex:visualization-widget-state-v2:${JSON.stringify([
+    globalThis.location.pathname,
+    globalThis.location.search,
+  ])}`;
+  const parseState = (serializedState) => {
+    if (
+      typeof serializedState !== "string" ||
+      new TextEncoder().encode(serializedState).length > 16 * 1024
+    ) {
+      throw new TypeError(
+        "Widget state must be a JSON object of at most 16 KiB",
+      );
+    }
+    /** @type {unknown} */
+    const state = JSON.parse(serializedState);
+    if (
+      state == null ||
+      typeof state !== "object" ||
+      Array.isArray(state) ||
+      ("imageIds" in state &&
+        (!Array.isArray(state.imageIds) || state.imageIds.length > 0))
+    ) {
+      throw new TypeError("Widget state must be a JSON object");
+    }
+    const storedState = { modelContent: null, privateContent: null, ...state };
+    const canonicalState = JSON.stringify(
+      storedState,
+      (_key, /** @type {unknown} */ value) => {
+        if (typeof value === "number" && !Number.isFinite(value)) {
+          throw new TypeError("Widget state must contain finite numbers");
+        }
+        return value;
+      },
+    );
+    if (new TextEncoder().encode(canonicalState).length > 16 * 1024) {
+      throw new TypeError(
+        "Widget state must be a JSON object of at most 16 KiB",
+      );
+    }
+    return storedState;
+  };
+  let storage = null;
+  let state = null;
+  try {
+    const localStorage = globalThis.localStorage;
+    const probeKey = `${storageKey}:probe`;
+    localStorage.setItem(probeKey, "1");
+    localStorage.removeItem(probeKey);
+    storage = localStorage;
+    const savedState = storage.getItem(storageKey);
+    if (savedState != null) {
+      try {
+        state = parseState(savedState);
+      } catch {
+        // Invalid saved state does not disable future writes.
+      }
+    }
+  } catch {
+    storage = null;
+  }
+  const initialGlobals = {
+    widgetState: state,
+    statePersistence: storage == null ? "none" : "local",
+  };
+
+  const channel = new MessageChannel();
+  channel.port1.addEventListener("message", (event) => {
+    const data = event.data;
+    if (typeof data !== "object" || data == null) {
+      return;
+    }
+    if (data.type === "widget-state-write") {
+      if (!Number.isSafeInteger(data.id) || data.id <= 0) {
+        return;
+      }
+      let ok = false;
+      try {
+        if (storage != null) {
+          const state = parseState(data.state);
+          storage.setItem(storageKey, JSON.stringify(state));
+          ok = true;
+        }
+      } catch {
+        // Storage denial, quota limits, and invalid state return a failed receipt.
+      }
+      channel.port1.postMessage({
+        type: "widget-state-result",
+        id: data.id,
+        ok,
+      });
+      return;
+    }
+    if (data.type === "height") {
+      const height = data.height;
+      if (
+        typeof height === "number" &&
+        Number.isFinite(height) &&
+        height >= 0 &&
+        height <= 10_000
+      ) {
+        frame.style.height = Math.ceil(height) + "px";
+      }
+      return;
+    }
+    if (data.type === "scroll-to") {
+      const top = data.top;
+      if (
+        typeof top === "number" &&
+        Number.isFinite(top) &&
+        top >= 0 &&
+        globalThis.navigator.userActivation?.isActive === true
+      ) {
+        globalThis.scrollTo({
+          top: Math.ceil(
+            globalThis.scrollY + frame.getBoundingClientRect().top + top,
+          ),
+        });
+      }
+      return;
+    }
+    if (data.type === "open-external") {
+      const rawHref = data.href;
+      if (typeof rawHref !== "string") {
+        return;
+      }
+      let href;
+      try {
+        const url = new URL(rawHref, document.baseURI);
+        if (url.protocol !== "https:") {
+          return;
+        }
+        href = url.href;
+      } catch {
+        return;
+      }
+      if (globalThis.navigator.userActivation?.isActive === true) {
+        const anchor = document.createElement("a");
+        anchor.href = href;
+        anchor.rel = "noopener noreferrer";
+        anchor.target = "_blank";
+        document.body.appendChild(anchor);
+        anchor.click();
+        anchor.remove();
+      }
+      return;
+    }
+    if (data.type === "follow-up") {
+      const prompt = data.prompt;
+      if (
+        typeof prompt !== "string" ||
+        globalThis.navigator.userActivation?.isActive !== true
+      ) {
+        return;
+      }
+      const title = data.title;
+      globalThis.prompt(typeof title === "string" ? title : prompt, prompt);
+    }
+  });
+  channel.port1.start();
+  const srcdoc = frame.dataset.srcdoc;
+  if (srcdoc == null) {
+    return;
+  }
+  globalThis.addEventListener("resize", () => {
+    const height = Number.parseFloat(frame.style.height);
+    if (!Number.isFinite(height) || height <= viewportHeight) {
+      frame.style.removeProperty("height");
+    }
+    viewportHeight = globalThis.innerHeight;
+    channel.port1.postMessage({ type: "measure" });
+  });
+  frame.addEventListener(
+    "load",
+    () => {
+      frame.contentWindow?.postMessage(
+        { type: "codex-visualization-initialize" },
+        "*",
+        [channel.port2],
+      );
+    },
+    { once: true },
+  );
+  // Match the trusted bootstrap element, not the same text in an authored title.
+  frame.srcdoc = srcdoc.replace(
+    '<script type="application/json" id="codex-visualization-widget-state">__CODEX_VISUALIZATION_WIDGET_STATE__<\/script>',
+    () =>
+      '<script type="application/json" id="codex-visualization-widget-state">' +
+      JSON.stringify(initialGlobals).replaceAll("<", "\\u003c") +
+      "<\/script>",
+  );
+  delete frame.dataset.srcdoc;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+flowchart LR
+  %% Deviantly architecture overview derived from deviantly-architecture-map.html
+  %% Solid edges = code-derived or explicitly database-verified in the source HTML.
+  %% Dashed edges = inferred, incomplete, or unverified handoff.
+
+  subgraph CLIENTS[Client applications]
+    USERS[Product users / external clients]
+    WEB[React application UI]
+    LAND[Public landing site<br/>SvelteKit static build + Express]
+    USERS --> WEB
+    USERS --> LAND
+  end
+
+  subgraph APP[Application services]
+    API[Go Chi API router<br/>port 8081]
+    VIDEO[Video query handler / service]
+    TREND[Trend handler]
+    MASTER[In-memory MasterClusters<br/>and generated live telemetry]
+    LIVE[Live Feed client + in-process cache]
+    COMMERCE[Product / shop / brand / creator repositories]
+    LSELL[Live Selling handler]
+    INSIGHT[Insight / hooks / Top Ads handlers]
+    AUTH[Authentication and admin handlers]
+    MEDIA[Media handler / task state]
+  end
+
+  subgraph STORES[Data stores]
+    CH[(ClickHouse<br/>video corpus, metrics, rollups)]
+    PG[(Primary PostgreSQL<br/>deviantly.* application data)]
+    ECHO[(Separate EchoTik PostgreSQL<br/>leaderboard_videos snapshots / JSON)]
+    LPG[(Landing PostgreSQL<br/>bookings + waitlist)]
+    FILES[(Local JSON reports / files<br/>and task state)]
+  end
+
+  subgraph INGEST[Data ingestion / events]
+    YTDISC[Go YouTube discovery crawler]
+    SHARDS[Shard files<br/>channel IDs / JSONL]
+    YTEX[Rust extractor<br/>scan / dedupe / enrich]
+    YTPG[(Extractor PostgreSQL<br/>youtube_shorts + creators)]
+    YTKAFKA{{Kafka topics<br/>youtube.shorts / youtube.creators}}
+    KRAW[(ClickHouse kafka_* raw tables)]
+    KMV[(ClickHouse mv_kafka_* resources)]
+    SERVE[(ClickHouse serving tables<br/>videos / shorts / metrics)]
+
+    TTCRAWL[TikTok Shop crawler + enrichers]
+    TTPG[(tiktok_shop.* + kafka_outbox)]
+    TTPUB[TikTok Shop publisher script]
+
+    IGCRAWL[Instagram crawler / harvester]
+    IGP[(PostgreSQL<br/>instagram_reels + creators)]
+    IGCH[(ClickHouse<br/>instagram_reels + metrics)]
+
+    AMZ[Amazon scanner]
+    AMZPG[(PostgreSQL amazon_product)]
+    AMZAPI[API SQL target<br/>deviantly.amazon_products]
+  end
+
+  subgraph EXTERNAL[External dependencies]
+    AI[AI / media providers]
+    MCP[External MCP endpoint]
+    REPORT[External product-report service<br/>PRODUCT_RESEARCH_URL]
+    GOOGLE[Google identity provider]
+    WEBHOOK[Optional landing webhook]
+  end
+
+  WEB -->|HTTP API requests| API
+  API --> VIDEO
+  VIDEO -->|HTTP SQL queries| CH
+  API --> TREND
+  TREND -->|Trend matrix path| MASTER
+  TREND -->|Leaderboard / hashtags| ECHO
+  API --> LIVE
+  LIVE -->|ClickHouse HTTP queries| CH
+  API --> COMMERCE
+  COMMERCE --> PG
+  API --> LSELL
+  LSELL --> PG
+  API --> INSIGHT
+  INSIGHT --> PG
+  API --> AUTH
+  AUTH --> PG
+  AUTH --> GOOGLE
+  API --> MEDIA
+  MEDIA --> AI
+  MEDIA --> FILES
+  API -->|Viral Ideas search path| MCP
+  API -->|Product research jobs / status| REPORT
+  LAND -->|POST /demo and /waitlist| LPG
+  LAND -.->|Optional fire-and-forget webhook| WEBHOOK
+
+  YTDISC --> SHARDS --> YTEX --> YTPG -->|publish; ack then mark published| YTKAFKA
+  YTKAFKA -.->|Consumer / serving mapping unverified| KRAW
+  KRAW -.->|Materialized-view lineage needs DDL| KMV
+  KMV -.->|Target relationship needs DDL| SERVE
+  SERVE --> CH
+
+  TTCRAWL -->|Upsert where enabled| TTPG
+  TTPG -.->|Publisher script exists; runtime caller not located| TTPUB
+  TTPUB -.->|Topic / downstream consumer not verified| KRAW
+
+  IGCRAWL -->|PostgreSQL upsert| IGP
+  IGP -.->|PostgreSQL-to-ClickHouse bridge unknown| IGCH
+  IGCH --> CH
+
+  AMZ --> AMZPG
+  AMZPG -.->|Schema mapping not proven| AMZAPI
+  AMZAPI -.->|Amazon include path disabled / join uncertain| COMMERCE
+
+  classDef app fill:#e8f1ff,stroke:#3b6ea8,color:#102a43;
+  classDef code fill:#eaf7ed,stroke:#3a8754,color:#153b22;
+  classDef store fill:#f1edff,stroke:#7b61a8,color:#2b1b4b;
+  classDef external fill:#fff5e5,stroke:#b7791f,color:#5c3a00;
+  classDef inferred fill:#fff0f0,stroke:#be5555,color:#6f1d1b,stroke-dasharray:5 5;
+
+  class WEB,LAND,API,VIDEO,TREND,LIVE,COMMERCE,LSELL,INSIGHT,AUTH,MEDIA app;
+  class YTDISC,SHARDS,YTEX,TTCRAWL,IGCRAWL,AMZ code;
+  class CH,PG,ECHO,LPG,FILES,YTPG,KRAW,KMV,SERVE,TTPG,IGP,IGCH,AMZPG,AMZAPI,MASTER store;
+  class AI,MCP,REPORT,GOOGLE,WEBHOOK external;
