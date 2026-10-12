@@ -1497,6 +1497,7 @@ svg.lucide {
 }
 
 html&gt;body{padding:0}&lt;/style&gt;
+&lt;style&gt;#deviantly-map[hidden]{display:none!important}&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;script type=&quot;application/json&quot; id=&quot;codex-visualization-widget-state&quot;&gt;__CODEX_VISUALIZATION_WIDGET_STATE__&lt;/script&gt;
@@ -1786,6 +1787,13 @@ html&gt;body{padding:0}&lt;/style&gt;
   syncTheme();
 })();
 &lt;/script&gt;
+
+&lt;nav id=&quot;engineering-section-nav&quot; aria-label=&quot;Architecture and engineering sections&quot; role=&quot;tablist&quot;&gt;
+  &lt;button type=&quot;button&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot; class=&quot;eng-tab active&quot; data-section=&quot;architecture&quot;&gt;Architecture &amp;amp; data flow&lt;/button&gt;
+  &lt;button type=&quot;button&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; class=&quot;eng-tab&quot; data-section=&quot;audit&quot;&gt;Engineering audit &lt;span class=&quot;eng-tab-count&quot;&gt;6&lt;/span&gt;&lt;/button&gt;
+  &lt;button type=&quot;button&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; class=&quot;eng-tab&quot; data-section=&quot;roadmap&quot;&gt;Improvement roadmap&lt;/button&gt;
+&lt;/nav&gt;
+
 &lt;div id=&quot;deviantly-map&quot; aria-label=&quot;Interactive Deviantly architecture map&quot;&gt;
   &lt;style&gt;
     #deviantly-map{--ink:#232326;--muted:#5c5c5c;--subtle:#757575;--line:#dedede;--surface:#fff;--wash:#f7f7f5;--lime:#e8f000;--green:#0a8f43;--amber:#9a5700;--red:#ba3030;color:var(--ink);font:14px/1.45 ui-sans-serif,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,sans-serif;background:#fafafa;padding:18px;width:100%;max-width:1600px;margin:auto}#deviantly-map *{box-sizing:border-box}#deviantly-map h1,#deviantly-map h2,#deviantly-map h3,#deviantly-map p{margin:0}#deviantly-map h1{font-size:24px;font-weight:700;letter-spacing:-.03em}#deviantly-map h2{font-size:17px;font-weight:650}#deviantly-map h3{font-size:14px;font-weight:650}#deviantly-map button{font:inherit;color:inherit}.map-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:14px}.map-head p{color:var(--muted);margin-top:4px}.map-stamp{white-space:nowrap;color:var(--muted);font-size:12px}.map-stamp b{color:var(--ink);font-weight:650}.map-legend{display:flex;flex-wrap:wrap;gap:8px 16px;border-block:1px solid var(--line);padding:9px 0;margin-bottom:14px;color:var(--muted);font-size:12px}.map-legend span{display:inline-flex;align-items:center;gap:6px}.dot{width:8px;height:8px;border-radius:50%;background:var(--ink)}.dot.db{background:var(--green)}.dot.inferred{background:var(--amber)}.dot.gap{background:var(--red)}.map-layout{display:block}.inspector{position:relative;top:auto;flex:0 0 250px;width:250px;max-width:250px;max-height:380px;overflow:auto;border:1px solid var(--line);background:var(--surface);padding:12px;min-height:110px}.inspect-top{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}.status{font-size:11px;font-weight:650;text-transform:uppercase;letter-spacing:.045em;color:var(--muted);border:1px solid var(--line);padding:3px 6px}.status.db{color:var(--green)}.status.inferred{color:var(--amber)}.status.gap{color:var(--red)}.inspector p{color:var(--muted);margin:8px 0 12px}.inspector ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}.inspector li{margin:5px 0}.detail-tabs{margin:10px 0 8px}.nav-link[data-detail-tab]{cursor:pointer}[role=&quot;tabpanel&quot;][hidden]{display:none}.detail-label{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--subtle);margin-top:13px}.inspector code{font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;background:#f0f0ed;padding:2px 4px;overflow-wrap:anywhere}.evidence{font-size:12px;color:var(--subtle);padding-top:10px;border-top:1px solid var(--line);margin-top:12px}.flow-sections{min-width:0}.zone{padding:0 0 19px;margin-bottom:18px;border-bottom:1px solid var(--line)}.zone:last-child{border:0;margin:0}.zone-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:9px}.zone-heading p{color:var(--muted);font-size:12px}.lane{margin-top:10px}.lane-title{color:var(--subtle);font-size:11px;text-transform:uppercase;letter-spacing:.055em;margin-bottom:6px}.flow{display:flex;align-items:stretch;gap:6px;overflow-x:auto;padding:2px 1px 5px}.node{position:relative;text-align:left;min-width:126px;max-width:190px;flex:1 0 126px;min-height:68px;padding:9px 10px;background:var(--surface);border:1px solid var(--line);cursor:pointer}.node:hover,.edge:hover{background:#f0f0eb}.node[aria-pressed=&quot;true&quot;]{border-color:var(--ink);box-shadow:inset 3px 0 var(--lime)}.node strong{display:block;font-weight:650;line-height:1.25}.node small{display:block;color:var(--muted);font-size:11px;margin-top:5px;line-height:1.3}.kind{color:var(--subtle);font-size:10px;text-transform:uppercase;letter-spacing:.045em}.edge{align-self:center;flex:0 0 45px;min-width:45px;max-width:68px;border:0;background:transparent;color:var(--muted);cursor:pointer;padding:2px 0;font-size:11px;line-height:1.1;text-align:center}.edge b{display:block;font-size:22px;font-weight:400;line-height:1;color:var(--ink)}.edge.dashed b{color:var(--amber)}.edge small{display:block;font-size:10px;white-space:normal}.flag{display:inline-block;font-size:10px;color:#6c4b00;background:#fff4ce;padding:1px 4px;margin-top:5px}.zone-crawler{padding-top:10px}.crawler-note{font-size:12px;color:var(--muted);margin:0 0 8px}.source-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.source-list code{font-size:11px;color:var(--muted)}.flow-hint{font-size:11px;color:var(--subtle);margin-top:5px}.mode{font-size:11px;color:var(--subtle)}@media(max-width:820px){#deviantly-map{padding:12px}.map-layout{grid-template-columns:1fr;gap:14px}.inspector{position:relative;top:auto;grid-row:1;min-height:0}.flow-sections{grid-row:2}.map-head{display:block}.map-stamp{margin-top:8px}}@media(max-width:440px){.zone-heading{display:block}.zone-heading p{margin-top:3px}.node{min-width:116px;flex-basis:116px}.edge{flex-basis:38px;min-width:38px}.inspector{flex-basis:230px;width:230px;max-width:230px}}
@@ -2102,6 +2110,179 @@ html&gt;body{padding:0}&lt;/style&gt;
     })();
   &lt;/script&gt;
 &lt;/div&gt;
+
+&lt;style&gt;
+#engineering-section-nav{display:flex;gap:6px;flex-wrap:wrap;align-items:center;max-width:1600px;margin:0 auto;padding:12px 18px 0;background:#fafafa;color:#232326;font:13px/1.45 ui-sans-serif,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,sans-serif}
+#engineering-section-nav .eng-tab{display:inline-flex;gap:8px;align-items:center;justify-content:center;background:#fff;border:1px solid #d0d0d0;border-radius:7px;padding:9px 12px;color:#5c5c5c;font-weight:650;cursor:pointer}
+#engineering-section-nav .eng-tab.active{background:#e8f000;border-color:#d6de00;color:#232326}
+#engineering-section-nav .eng-tab-count{font-size:10px;line-height:1;padding:3px 6px;background:#232326;color:#fff;border-radius:10px}
+#engineering-section-nav .eng-tab:focus-visible,.engineering-extra button:focus-visible{outline:2px solid #232326;outline-offset:2px}
+.engineering-extra{max-width:1600px;margin:0 auto;padding:18px;color:#232326;background:#fafafa;font:13px/1.5 ui-sans-serif,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,sans-serif}
+.engineering-extra *{box-sizing:border-box}
+.engineering-extra[hidden]{display:none!important}
+.engineering-extra h1,.engineering-extra h2,.engineering-extra h3,.engineering-extra p{margin:0}
+.engineering-extra h1{font-size:23px;letter-spacing:-.025em}
+.engineering-extra h2{font-size:15px}
+.engineering-extra h3{font-size:14px}
+.engineering-extra .eng-sub{color:#5c5c5c;margin-top:5px;font-size:12px}
+.engineering-extra .eng-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.engineering-extra .eng-pill{display:inline-block;border:1px solid #d0d0d0;border-radius:6px;padding:4px 8px;color:#5c5c5c;font-size:11px;white-space:normal}
+.engineering-extra .eng-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}
+.engineering-extra .eng-stat,.engineering-extra .eng-finding,.engineering-extra .eng-phase,.engineering-extra .eng-detail{background:#fff;border:1px solid #e6e6e6;border-radius:10px;box-shadow:0 1px 2px #00000008}
+.engineering-extra .eng-stat{padding:12px 14px}
+.engineering-extra .eng-stat strong{display:block;font-size:21px;line-height:1.4}
+.engineering-extra .eng-stat span{color:#5c5c5c;font-size:11px}
+.engineering-extra .eng-audit-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:12px;align-items:start}
+.engineering-extra .eng-toolbar{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}
+.engineering-extra .eng-toolbar input,.engineering-extra .eng-toolbar select{min-height:36px;max-width:100%;background:#fff;color:#232326;border:1px solid #d0d0d0;border-radius:7px;padding:7px 9px;font:inherit}
+.engineering-extra .eng-toolbar input{flex:1 1 200px}
+.engineering-extra .eng-findings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.engineering-extra .eng-finding{padding:13px;cursor:pointer;text-align:left;color:#232326;width:100%;display:block}
+.engineering-extra .eng-finding:hover,.engineering-extra .eng-finding.selected{border-color:#8c9100;background:#fdffe6}
+.engineering-extra .eng-finding h3{margin:8px 0 5px;font-size:13px}
+.engineering-extra .eng-finding p{font-size:12px;color:#43566a}
+.engineering-extra .eng-meta{display:flex;gap:5px;flex-wrap:wrap}
+.engineering-extra .eng-badge{display:inline-block;border:1px solid #d0d0d0;border-radius:6px;padding:2px 6px;font-size:10px;color:#5c5c5c}
+.engineering-extra .eng-badge.high{color:#a51d2b;border-color:#e6b9be;background:#fdecec}
+.engineering-extra .eng-badge.medium{color:#815800;border-color:#dfca99;background:#fffaf2}
+.engineering-extra .eng-badge.confirmed{color:#216b42;border-color:#acd4ba}
+.engineering-extra .eng-detail{padding:15px;position:sticky;top:12px;max-height:calc(100vh - 28px);overflow:auto}
+.engineering-extra .eng-detail h2{margin:8px 0}
+.engineering-extra .eng-detail .eng-section{border-top:1px solid #efefef;margin-top:12px;padding-top:10px}
+.engineering-extra .eng-detail .eng-label{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#757575}
+.engineering-extra .eng-detail p{font-size:12px;color:#2a2a2e;margin-top:5px}
+.engineering-extra .eng-detail ul{padding-left:18px;margin:6px 0;color:#2a2a2e;font-size:11px}
+.engineering-extra .eng-detail li{margin:5px 0;overflow-wrap:anywhere}
+.engineering-extra .eng-roadmap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.engineering-extra .eng-phase{padding:14px}
+.engineering-extra .eng-phase h2{font-size:15px;margin-bottom:5px}
+.engineering-extra .eng-phase h3{margin:0 0 5px}
+.engineering-extra .eng-phase article{border-top:1px solid #efefef;padding:10px 0}
+.engineering-extra .eng-phase article p{font-size:11px;color:#5c5c5c;margin-top:5px}
+.engineering-extra .eng-phase button{margin-top:8px;background:#fff;border:1px solid #d0d0d0;border-radius:7px;padding:7px 9px;cursor:pointer;color:#232326;font:inherit;font-size:11px}
+.engineering-extra .eng-note{font-size:11px;color:#5c5c5c;margin:12px 0}
+.engineering-extra .eng-empty{color:#5c5c5c;text-align:center;padding:24px;border:1px dashed #d0d0d0;border-radius:8px;grid-column:1/-1}
+@media(max-width:1000px){.engineering-extra .eng-audit-layout{grid-template-columns:1fr}.engineering-extra .eng-detail{position:static;max-height:none}.engineering-extra .eng-roadmap{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){#engineering-section-nav{padding:12px;gap:5px}#engineering-section-nav .eng-tab{font-size:11px;padding:8px}.engineering-extra{padding:12px}.engineering-extra .eng-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.engineering-extra .eng-findings,.engineering-extra .eng-roadmap{grid-template-columns:1fr}}
+&lt;/style&gt;
+&lt;section id=&quot;engineering-audit-section&quot; class=&quot;engineering-extra&quot; hidden aria-labelledby=&quot;engineering-audit-title&quot;&gt;
+  &lt;div class=&quot;eng-head&quot;&gt;
+    &lt;div&gt;&lt;h1 id=&quot;engineering-audit-title&quot;&gt;Engineering audit&lt;/h1&gt;&lt;p class=&quot;eng-sub&quot;&gt;Evidence-linked findings from the provided engineering detail file. Confidence, severity, and validation needs are preserved from that source.&lt;/p&gt;&lt;/div&gt;
+    &lt;span class=&quot;eng-pill&quot;&gt;6 findings · evidence bounded&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;eng-stats&quot; id=&quot;eng-audit-stats&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;eng-audit-layout&quot;&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;eng-toolbar&quot;&gt;
+        &lt;input id=&quot;eng-finding-search&quot; type=&quot;search&quot; placeholder=&quot;Search findings, evidence, or recommendation&quot; aria-label=&quot;Search findings&quot;&gt;
+        &lt;select id=&quot;eng-severity-filter&quot; aria-label=&quot;Filter by severity&quot;&gt;&lt;option value=&quot;all&quot;&gt;All severity&lt;/option&gt;&lt;option&gt;Critical&lt;/option&gt;&lt;option&gt;High&lt;/option&gt;&lt;option&gt;Medium&lt;/option&gt;&lt;option&gt;Low&lt;/option&gt;&lt;/select&gt;
+        &lt;select id=&quot;eng-category-filter&quot; aria-label=&quot;Filter by category&quot;&gt;&lt;option value=&quot;all&quot;&gt;All categories&lt;/option&gt;&lt;option&gt;Security&lt;/option&gt;&lt;option&gt;Reliability&lt;/option&gt;&lt;option&gt;Data quality&lt;/option&gt;&lt;option&gt;Performance&lt;/option&gt;&lt;option&gt;Architecture&lt;/option&gt;&lt;/select&gt;
+        &lt;select id=&quot;eng-sort-findings&quot; aria-label=&quot;Sort findings&quot;&gt;&lt;option value=&quot;priority&quot;&gt;Priority order&lt;/option&gt;&lt;option value=&quot;severity&quot;&gt;Severity first&lt;/option&gt;&lt;/select&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;eng-findings-list&quot; class=&quot;eng-findings&quot;&gt;&lt;/div&gt;
+      &lt;p class=&quot;eng-note&quot;&gt;Evidence limitation: backlog figures are from a single sampled timestamp. They do not independently establish processing latency, data staleness, or capacity requirements.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;aside id=&quot;eng-finding-detail&quot; class=&quot;eng-detail&quot; aria-live=&quot;polite&quot;&gt;&lt;h2&gt;Finding details&lt;/h2&gt;&lt;p&gt;Select a finding to inspect evidence, impact, implementation steps, trade-offs, and validation criteria.&lt;/p&gt;&lt;/aside&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section id=&quot;engineering-roadmap-section&quot; class=&quot;engineering-extra&quot; hidden aria-labelledby=&quot;engineering-roadmap-title&quot;&gt;
+  &lt;div class=&quot;eng-head&quot;&gt;
+    &lt;div&gt;&lt;h1 id=&quot;engineering-roadmap-title&quot;&gt;Improvement roadmap&lt;/h1&gt;&lt;p class=&quot;eng-sub&quot;&gt;Prioritized by urgency, confidence, and effort. No quantified savings are assumed without measurement.&lt;/p&gt;&lt;/div&gt;
+    &lt;span class=&quot;eng-pill&quot;&gt;3 phases · 6 ranked findings&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;eng-roadmap-content&quot; class=&quot;eng-roadmap&quot;&gt;&lt;/div&gt;
+  &lt;p class=&quot;eng-note&quot;&gt;Strategic scaling or storage redesign is intentionally deferred until ownership, end-to-end freshness, and service objectives are measurable.&lt;/p&gt;
+&lt;/section&gt;
+&lt;script&gt;
+(()=&gt;{
+  const findings = [
+ {id:&#x27;SEC-001&#x27;,title:&#x27;Credentials are committed in source and deployment documentation&#x27;,category:&#x27;Security&#x27;,severity:&#x27;High&#x27;,status:&#x27;Confirmed exposure&#x27;,confidence:&#x27;High&#x27;,effort:&#x27;Small&#x27;,effortWhy:&#x27;Credential inventory and rotation are narrow tasks, but coordinated rollout/history cleanup adds some operational steps.&#x27;,nodes:[&#x27;api&#x27;,&#x27;pgapp&#x27;,&#x27;echo&#x27;,&#x27;landing&#x27;,&#x27;ops&#x27;],evidence:[&#x27;deviantly-server/README.md:3-7 (SSH credential disclosed)&#x27;,&#x27;deviantly-server/ecosystem.config.cjs:16-20 (database DSN in PM2 config)&#x27;,&#x27;deviantly-server/internal/db/db.go:15-21 (fallback DSN)&#x27;,&#x27;deviantly-server/internal/trend/repository.go:18-25 (fallback DSN)&#x27;,&#x27;deviantly-server/internal/media/handler.go:30-34 (provider key constant)&#x27;,&#x27;deviantly-server/internal/video/service.go:34-71 (service credential defaults)&#x27;],explanation:&#x27;Credential-shaped values are embedded in tracked docs/config/source. Validity is unknown, but a repository reader can retrieve them; replacing only the current file would leave history copies.&#x27;,impact:&#x27;Potential unauthorized database, provider, or host access; secret rotation and incident review may be required.&#x27;,root:&#x27;Runtime secrets have source-code and documentation fallbacks.&#x27;,recommendation:&#x27;Revoke and rotate affected credentials now. Remove values from tracked files/history where policy allows; read from environment or secret manager and fail closed for missing production credentials.&#x27;,plan:&#x27;Inventory credential-bearing files without copying values; rotate at each provider; replace literals with env lookups; scan the full Git history and deployment artifacts; add a secret scan to CI.&#x27;,benefit:&#x27;Reduces credential exposure and prevents accidental use of stale defaults.&#x27;,risk:&#x27;Rotation can interrupt services if all deployments are not updated together.&#x27;,validation:&#x27;Secret scan of current tree and history; verify old credentials are rejected; start service with intended environment and no source fallback.&#x27;,priority:1,phase:&#x27;Immediate fixes&#x27;,criteria:&#x27;No active secret in tracked content/history; affected credentials rotated; production starts only with injected secrets.&#x27;},
+ {id:&#x27;SEC-002&#x27;,title:&#x27;Image proxy can make server-side requests to arbitrary HTTP URLs&#x27;,category:&#x27;Security&#x27;,severity:&#x27;High&#x27;,status:&#x27;Strongly indicated&#x27;,confidence:&#x27;High&#x27;,effort:&#x27;Small&#x27;,effortWhy:&#x27;A focused URL policy and redirect checks fit one handler; regression tests cover the edge cases.&#x27;,nodes:[&#x27;api&#x27;],evidence:[&#x27;deviantly-server/internal/media/handler.go:47-60 (GET /proxy is registered)&#x27;,&#x27;deviantly-server/internal/media/handler.go:106-116 (only scheme prefix checked)&#x27;,&#x27;deviantly-server/internal/media/handler.go:126 onward (server fetch)&#x27;],explanation:&#x27;The public route accepts a caller-supplied URL and performs a server-side fetch. Scheme validation alone does not exclude loopback, private, link-local, metadata, or redirect targets.&#x27;,impact:&#x27;Could expose internal services or consume server resources through crafted requests.&#x27;,root:&#x27;No visible host/IP allowlist or redirect revalidation at the request boundary.&#x27;,recommendation:&#x27;Allow only approved media hostnames; resolve and reject non-public IPs; revalidate redirects; cap response size and accepted image MIME types; add per-user/IP rate limits.&#x27;,plan:&#x27;Add URL parsing/host policy before fetch; pin/revalidate resolved addresses and redirect destinations; test private IPv4/IPv6 and redirect cases; monitor blocked requests.&#x27;,benefit:&#x27;Restricts proxy egress to expected image origins.&#x27;,risk:&#x27;Legitimate CDN host changes can fail closed until allowlists are updated.&#x27;,validation:&#x27;Unit tests for private, loopback, IPv6, redirect, malformed URL and allowed CDN cases.&#x27;,priority:2,phase:&#x27;Immediate fixes&#x27;,criteria:&#x27;Only approved public media endpoints can be fetched and all redirects are revalidated.&#x27;},
+ {id:&#x27;REL-001&#x27;,title:&#x27;Health endpoint reports healthy without checking dependencies&#x27;,category:&#x27;Reliability&#x27;,severity:&#x27;Medium&#x27;,status:&#x27;Confirmed&#x27;,confidence:&#x27;High&#x27;,effort:&#x27;Small&#x27;,effortWhy:&#x27;Separate liveness/readiness handlers and bounded dependency checks are localized API work.&#x27;,nodes:[&#x27;api&#x27;,&#x27;pgapp&#x27;,&#x27;ch&#x27;,&#x27;echo&#x27;],evidence:[&#x27;deviantly-server/cmd/api/main.go:72-77 (API continues if PostgreSQL connection fails)&#x27;,&#x27;deviantly-server/cmd/api/main.go:98-103 (/health returns healthy unconditionally)&#x27;,&#x27;deviantly-server/internal/db/db.go:51-54 (ping failure returns pool)&#x27;],explanation:&#x27;The process can run with unavailable databases while /health still returns healthy. Load balancers and operators cannot distinguish process liveness from serving readiness.&#x27;,impact:&#x27;Traffic may be routed to a process whose data-backed endpoints are degraded or returning fallback content.&#x27;,root:&#x27;One health response conflates process liveness and dependency readiness.&#x27;,recommendation:&#x27;Keep liveness independent, add readiness that checks required stores with short bounded timeouts, and report degraded optional dependencies explicitly.&#x27;,plan:&#x27;Define required dependencies per route group; expose separate /live and /ready semantics; add handler-level dependency outage tests and deployment probe config.&#x27;,benefit:&#x27;Improves failure detection and avoids routing requests to unusable instances.&#x27;,risk:&#x27;Readiness checks must stay bounded and avoid turning transient optional outages into restart loops.&#x27;,validation:&#x27;Simulate unavailable Postgres/ClickHouse and confirm readiness changes while process liveness remains available.&#x27;,priority:3,phase:&#x27;Immediate fixes&#x27;,criteria:&#x27;Readiness status matches the stores required for configured API functionality.&#x27;},
+ {id:&#x27;DATA-001&#x27;,title:&#x27;Product endpoints can return fixture/mock content when the repository is unavailable&#x27;,category:&#x27;Data quality&#x27;,severity:&#x27;Medium&#x27;,status:&#x27;Confirmed&#x27;,confidence:&#x27;High&#x27;,effort:&#x27;Small&#x27;,effortWhy:&#x27;Remove fallback branches and cover nil/missing-data cases in the existing handler tests.&#x27;,nodes:[&#x27;api&#x27;,&#x27;pgapp&#x27;,&#x27;ui&#x27;],evidence:[&#x27;deviantly-server/cmd/api/main.go:106-123 (repositories only constructed when pool exists)&#x27;,&#x27;deviantly-server/internal/product/handler.go:151-166 (List uses MockTrendingProducts)&#x27;,&#x27;deviantly-server/internal/product/handler.go:169-185 (detail fixture fallback)&#x27;],explanation:&#x27;If the database pool is nil, selected product handlers serve in-memory sample content; a detail lookup can also use fixture JSON after repository lookup fails. This conflicts with the server rule requiring real data/empty responses.&#x27;,impact:&#x27;Users may mistake synthetic products or details for live catalog data, undermining decisions and trust.&#x27;,root:&#x27;Handlers use fixtures when no repository or when a record lookup fails.&#x27;,recommendation:&#x27;Return an explicit unavailable/error response when the database is unavailable and an empty/404 response for absent records. Keep fixtures in tests only.&#x27;,plan:&#x27;Remove production handler fallback branches and mock imports; add tests for nil repository and missing row; verify frontend displays empty/error state.&#x27;,benefit:&#x27;Prevents synthetic records from appearing as production data.&#x27;,risk:&#x27;Some local/demo flows may have relied on fallback data and will need an explicit test fixture path.&#x27;,validation:&#x27;API tests assert no fabricated payload is returned with nil repo or missing row.&#x27;,priority:4,phase:&#x27;Immediate fixes&#x27;,criteria:&#x27;Production handlers never serve mock/fixture payloads.&#x27;},
+ {id:&#x27;PERF-001&#x27;,title:&#x27;Several Kafka groups had measurable backlog in the sampled snapshot&#x27;,category:&#x27;Performance&#x27;,severity:&#x27;Medium&#x27;,status:&#x27;Confirmed snapshot; cause unknown&#x27;,confidence:&#x27;Medium&#x27;,effort:&#x27;Medium&#x27;,effortWhy:&#x27;Requires several time-window samples plus ownership/configuration tracing across the consumer boundary.&#x27;,nodes:[&#x27;kafka&#x27;,&#x27;consumer&#x27;,&#x27;ch&#x27;],evidence:[&#x27;Connected ClickHouse resource kafka_consumer_lag, snapshot at 2026-10-12 03:46 UTC&#x27;,&#x27;tracker-phase2 / tracker.phase2.due: total lag 15,325; max partition 4,223; 6 partitions&#x27;,&#x27;ch_author_upserted_c2 / author.upserted: total 6,275; max 1,648; 4 partitions&#x27;,&#x27;ch_video_snapshot_c2 / video.snapshot: total 5,720; max 661; 12 partitions&#x27;,&#x27;Other sampled groups include video.metrics 3,793 and video.discovered 3,424&#x27;],explanation:&#x27;The catalog contains non-zero lag in several groups at one timestamp. Without consecutive snapshots, arrival rate, processing rate, and retention context, this cannot establish stale data or a scaling bottleneck.&#x27;,impact:&#x27;If backlog is persistent or rising, downstream analytics may be delayed; current user-visible effect is unknown.&#x27;,root:&#x27;Not established. Consumer implementation/configuration was not located in inspected source paths.&#x27;,recommendation:&#x27;Capture lag over time with produce/consume rates and event age; identify group owners; investigate the highest sustained lag and partition skew before changing concurrency or partitions.&#x27;,plan:&#x27;Verify units and timestamp semantics; collect rolling snapshots; compare each partition’s lag slope and oldest event age; trace group config and sink errors; set actionable alert thresholds.&#x27;,benefit:&#x27;Separates transient queue depth from sustained consumer capacity problems.&#x27;,risk:&#x27;Adding consumers or partitions without ownership/key analysis can increase contention or break ordering.&#x27;,validation:&#x27;Show lag and oldest-event-age trends stabilize within an explicitly chosen service objective.&#x27;,priority:5,phase:&#x27;Structural improvements&#x27;,criteria:&#x27;Group owners and sustained backlog behavior are known; alert thresholds are tied to a freshness objective.&#x27;},
+ {id:&#x27;ARCH-001&#x27;,title:&#x27;Connected database catalog and backend schema targets do not line up&#x27;,category:&#x27;Architecture&#x27;,severity:&#x27;Medium&#x27;,status:&#x27;Unknown due to environment identity&#x27;,confidence:&#x27;Medium&#x27;,effort:&#x27;Small&#x27;,effortWhy:&#x27;Mostly a read-only environment mapping and schema/DDL review; access to deployment metadata may extend it.&#x27;,nodes:[&#x27;api&#x27;,&#x27;pgapp&#x27;,&#x27;ch&#x27;],evidence:[&#x27;deviantly-server/internal/db/db.go:15-21 expects virlo_metadata and queries deviantly.products&#x27;,&#x27;Connected Postgres catalog namespace: public; resources include deviantly_users, instagram_reels and tiktok_crawler_stats; no products resource listed&#x27;,&#x27;Backend video service references ClickHouse default.videos_500plus / videos_flat&#x27;,&#x27;Connected ClickHouse catalog lists resources in public namespace, including videos and kafka_* tables&#x27;],explanation:&#x27;The observed connector catalogs and source-code schema/resource names differ. The datasource may target another environment or expose remapped resources; current evidence cannot prove a production schema drift.&#x27;,impact:&#x27;Architecture findings, table/index recommendations and operational metrics could be attributed to the wrong database if environment identity is assumed.&#x27;,root:&#x27;Datasource identity/configuration mapping is not documented in the inspected workspace context.&#x27;,recommendation:&#x27;Record non-secret datasource identity (environment, logical DB, schema mapping) and reconcile source configuration with catalog resources before deeper tuning.&#x27;,plan:&#x27;Compare sanitized host/database/schema identifiers with the deployed API environment; inspect migration state and ClickHouse DDL read-only; document confirmed ownership and ingestion mappings.&#x27;,benefit:&#x27;Prevents changes against the wrong database and makes subsequent audit conclusions reliable.&#x27;,risk:&#x27;Low; access to deployment metadata may be needed.&#x27;,validation:&#x27;A reviewed mapping ties each source DSN variable to a named environment and catalog/schema.&#x27;,priority:6,phase:&#x27;Structural improvements&#x27;,criteria:&#x27;Source targets and connected metadata are reconciled; unmatched objects have an owner or explanation.&#x27;}];
+  const roadmap = [
+ {phase:&#x27;Immediate fixes&#x27;,subtitle:&#x27;Contain exposed risk and protect data correctness&#x27;,items:[1,2,3,4]},
+ {phase:&#x27;Structural improvements&#x27;,subtitle:&#x27;Resolve evidence gaps and operational signals&#x27;,items:[5,6]},
+ {phase:&#x27;Strategic improvements&#x27;,subtitle:&#x27;Only after runtime ownership is clear&#x27;,items:[],empty:&#x27;Instrument end-to-end freshness and service objectives before proposing scaling or storage redesign.&#x27;}];
+  const nav = document.getElementById(&#x27;engineering-section-nav&#x27;);
+  const map = document.getElementById(&#x27;deviantly-map&#x27;);
+  const audit = document.getElementById(&#x27;engineering-audit-section&#x27;);
+  const road = document.getElementById(&#x27;engineering-roadmap-section&#x27;);
+  // Both audit panels share scoped styles but keep separate section IDs.
+  audit.removeAttribute(&#x27;id&#x27;);
+  audit.id = &#x27;engineering-audit-section&#x27;;
+  road.removeAttribute(&#x27;id&#x27;);
+  road.id = &#x27;engineering-roadmap-section&#x27;;
+  const auditList = document.getElementById(&#x27;eng-findings-list&#x27;);
+  const detail = document.getElementById(&#x27;eng-finding-detail&#x27;);
+  const esc = value =&gt; String(value ?? &#x27;&#x27;).replace(/[&amp;&lt;&gt;&quot;&#x27;]/g, ch =&gt; ({&#x27;&amp;&#x27;:&#x27;&amp;amp;&#x27;,&#x27;&lt;&#x27;:&#x27;&amp;lt;&#x27;,&#x27;&gt;&#x27;:&#x27;&amp;gt;&#x27;,&#x27;&quot;&#x27;:&#x27;&amp;quot;&#x27;,&quot;&#x27;&quot;:&#x27;&amp;#39;&#x27;}[ch]));
+  const byPriority = priority =&gt; findings.find(f =&gt; f.priority === priority);
+  function switchSection(name) {
+    map.hidden = name !== &#x27;architecture&#x27;;
+    audit.hidden = name !== &#x27;audit&#x27;;
+    road.hidden = name !== &#x27;roadmap&#x27;;
+    nav.querySelectorAll(&#x27;[data-section]&#x27;).forEach(button =&gt; {
+      const active = button.dataset.section === name;
+      button.classList.toggle(&#x27;active&#x27;, active);
+      button.setAttribute(&#x27;aria-selected&#x27;, String(active));
+    });
+    if (name === &#x27;audit&#x27;) renderFindings();
+    if (name === &#x27;roadmap&#x27;) renderRoadmap();
+  }
+  function renderStats() {
+    const high = findings.filter(f =&gt; f.severity === &#x27;High&#x27;).length;
+    const medium = findings.filter(f =&gt; f.severity === &#x27;Medium&#x27;).length;
+    document.getElementById(&#x27;eng-audit-stats&#x27;).innerHTML = [
+      [findings.length,&#x27;Total findings&#x27;],
+      [high,&#x27;High severity&#x27;],
+      [medium,&#x27;Medium severity&#x27;],
+      [new Set(findings.map(f=&gt;f.category)).size,&#x27;Audit categories&#x27;]
+    ].map(([n,label])=&gt;`&lt;div class=&quot;eng-stat&quot;&gt;&lt;strong&gt;${n}&lt;/strong&gt;&lt;span&gt;${label}&lt;/span&gt;&lt;/div&gt;`).join(&#x27;&#x27;);
+  }
+  function renderFindings() {
+    let rows = [...findings];
+    const q = document.getElementById(&#x27;eng-finding-search&#x27;).value.toLowerCase();
+    const sev = document.getElementById(&#x27;eng-severity-filter&#x27;).value;
+    const cat = document.getElementById(&#x27;eng-category-filter&#x27;).value;
+    if (q) rows = rows.filter(f =&gt; JSON.stringify(f).toLowerCase().includes(q));
+    if (sev !== &#x27;all&#x27;) rows = rows.filter(f =&gt; f.severity === sev);
+    if (cat !== &#x27;all&#x27;) rows = rows.filter(f =&gt; f.category === cat);
+    if (document.getElementById(&#x27;eng-sort-findings&#x27;).value === &#x27;severity&#x27;) {
+      rows.sort((a,b)=&gt;[&#x27;Critical&#x27;,&#x27;High&#x27;,&#x27;Medium&#x27;,&#x27;Low&#x27;].indexOf(a.severity)-[&#x27;Critical&#x27;,&#x27;High&#x27;,&#x27;Medium&#x27;,&#x27;Low&#x27;].indexOf(b.severity) || a.priority-b.priority);
+    } else rows.sort((a,b)=&gt;a.priority-b.priority);
+    auditList.innerHTML = rows.length ? rows.map(f =&gt; `&lt;button type=&quot;button&quot; class=&quot;eng-finding ${window.engSelectedFinding===f.id?&#x27;selected&#x27;:&#x27;&#x27;}&quot; data-finding=&quot;${esc(f.id)}&quot;&gt;&lt;div class=&quot;eng-meta&quot;&gt;&lt;span class=&quot;eng-badge ${f.severity.toLowerCase()}&quot;&gt;${esc(f.severity)}&lt;/span&gt;&lt;span class=&quot;eng-badge&quot;&gt;${esc(f.id)}&lt;/span&gt;&lt;span class=&quot;eng-badge&quot;&gt;${esc(f.category)}&lt;/span&gt;&lt;span class=&quot;eng-badge&quot;&gt;${esc(f.status)}&lt;/span&gt;&lt;/div&gt;&lt;h3&gt;${esc(f.title)}&lt;/h3&gt;&lt;p&gt;${esc(f.impact)}&lt;/p&gt;&lt;div class=&quot;eng-meta&quot; style=&quot;margin-top:8px&quot;&gt;&lt;span class=&quot;eng-badge&quot;&gt;Confidence ${esc(f.confidence)}&lt;/span&gt;&lt;span class=&quot;eng-badge&quot;&gt;Effort ${esc(f.effort)}&lt;/span&gt;&lt;/div&gt;&lt;/button&gt;`).join(&#x27;&#x27;) : &#x27;&lt;div class=&quot;eng-empty&quot;&gt;No findings match these filters.&lt;/div&gt;&#x27;;
+    auditList.querySelectorAll(&#x27;[data-finding]&#x27;).forEach(button=&gt;button.addEventListener(&#x27;click&#x27;,()=&gt;showFinding(button.dataset.finding)));
+  }
+  function showFinding(id) {
+    const f = findings.find(row=&gt;row.id===id);
+    if (!f) return;
+    window.engSelectedFinding = id;
+    renderFindings();
+    detail.innerHTML = `&lt;h2&gt;${esc(f.id)} · ${esc(f.title)}&lt;/h2&gt;&lt;div class=&quot;eng-meta&quot;&gt;&lt;span class=&quot;eng-badge ${f.severity.toLowerCase()}&quot;&gt;${esc(f.severity)}&lt;/span&gt;&lt;span class=&quot;eng-badge&quot;&gt;${esc(f.status)}&lt;/span&gt;&lt;span class=&quot;eng-badge&quot;&gt;Priority ${f.priority}&lt;/span&gt;&lt;/div&gt;${[
+      [&#x27;Observed evidence&#x27;, f.evidence.map(e=&gt;`&lt;li&gt;${esc(e)}&lt;/li&gt;`).join(&#x27;&#x27;)],
+      [&#x27;Technical explanation&#x27;, `&lt;p&gt;${esc(f.explanation)}&lt;/p&gt;`],
+      [&#x27;Impact&#x27;, `&lt;p&gt;${esc(f.impact)}&lt;/p&gt;`],
+      [&#x27;Root cause&#x27;, `&lt;p&gt;${esc(f.root)}&lt;/p&gt;`],
+      [&#x27;Recommendation&#x27;, `&lt;p&gt;${esc(f.recommendation)}&lt;/p&gt;`],
+      [&#x27;Implementation plan&#x27;, `&lt;p&gt;${esc(f.plan)}&lt;/p&gt;`],
+      [&#x27;Expected benefit&#x27;, `&lt;p&gt;${esc(f.benefit)}&lt;/p&gt;`],
+      [&#x27;Trade-offs and risks&#x27;, `&lt;p&gt;${esc(f.risk)}&lt;/p&gt;`],
+      [&#x27;Validation plan&#x27;, `&lt;p&gt;${esc(f.validation)}&lt;/p&gt;`],
+      [&#x27;Acceptance criteria&#x27;, `&lt;p&gt;${esc(f.criteria)}&lt;/p&gt;`],
+      [&#x27;Affected component IDs&#x27;, `&lt;ul&gt;${f.nodes.map(n=&gt;`&lt;li&gt;&lt;code&gt;${esc(n)}&lt;/code&gt;&lt;/li&gt;`).join(&#x27;&#x27;)}&lt;/ul&gt;`]
+    ].map(([label,content])=&gt;`&lt;div class=&quot;eng-section&quot;&gt;&lt;div class=&quot;eng-label&quot;&gt;${label}&lt;/div&gt;${label===&#x27;Observed evidence&#x27;?`&lt;ul&gt;${content}&lt;/ul&gt;`:content}&lt;/div&gt;`).join(&#x27;&#x27;)}`;
+  }
+  function renderRoadmap() {
+    document.getElementById(&#x27;eng-roadmap-content&#x27;).innerHTML = roadmap.map(phase =&gt; `&lt;article class=&quot;eng-phase&quot;&gt;&lt;h2&gt;${esc(phase.phase)}&lt;/h2&gt;&lt;p class=&quot;eng-sub&quot;&gt;${esc(phase.subtitle)}&lt;/p&gt;${phase.items.length ? phase.items.map(rank =&gt; { const f = byPriority(rank); return `&lt;article&gt;&lt;h3&gt;${rank}. ${esc(f.id)} · ${esc(f.title)}&lt;/h3&gt;&lt;p&gt;${esc(f.recommendation)}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Outcome:&lt;/strong&gt; ${esc(f.criteria)}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Validation:&lt;/strong&gt; ${esc(f.validation)}&lt;/p&gt;&lt;button type=&quot;button&quot; data-roadmap-finding=&quot;${esc(f.id)}&quot;&gt;Open audit finding&lt;/button&gt;&lt;/article&gt;`; }).join(&#x27;&#x27;) : `&lt;p class=&quot;eng-note&quot;&gt;${esc(phase.empty)}&lt;/p&gt;`}&lt;/article&gt;`).join(&#x27;&#x27;);
+    document.querySelectorAll(&#x27;[data-roadmap-finding]&#x27;).forEach(button=&gt;button.addEventListener(&#x27;click&#x27;,()=&gt;{switchSection(&#x27;audit&#x27;);showFinding(button.dataset.roadmapFinding)}));
+  }
+  nav.querySelectorAll(&#x27;[data-section]&#x27;).forEach(button=&gt;button.addEventListener(&#x27;click&#x27;,()=&gt;switchSection(button.dataset.section)));
+  [&#x27;eng-finding-search&#x27;,&#x27;eng-severity-filter&#x27;,&#x27;eng-category-filter&#x27;,&#x27;eng-sort-findings&#x27;].forEach(id=&gt;document.getElementById(id).addEventListener(id===&#x27;eng-finding-search&#x27;?&#x27;input&#x27;:&#x27;change&#x27;,renderFindings));
+  renderStats(); renderFindings(); renderRoadmap();
+})();
+&lt;/script&gt;
 
 &lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
