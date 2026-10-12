@@ -47,7 +47,7 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-  VE[Video Explorer UI] -->|GET /api/v1/videos, /ai-rewrite, /&#123;id&#125;, /thumbnail| API[Go Chi API]
+  VE[Video Explorer UI] -->|GET videos, rewrite, detail by :id, thumbnail| API[Go Chi API]
   API --> VH[Video handler / service<br/>filters, search, sort, pagination]
   VH -->|Platform-specific SQL| CH[(ClickHouse)]
   CH --- VT[Tables named in the HTML:<br/>videos_500plus / videos_flat<br/>youtube_shorts_1000plus<br/>instagram_reels + metrics]
